@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DimasyyyaFilms - Главная</title>
+    <link rel="stylesheet" href="CSS/global.css">
+    <link rel="stylesheet" href="CSS/carousels.css"> 
+    <link rel="stylesheet" href="CSS/quiz.css">
+
+</head>
+
+<body>
+    <header>
+        <!-- Космические элементы фона -->
+        <div class="rocket-bg rocket-bg-1">🚀</div>
+        <div class="rocket-bg rocket-bg-2">🚀</div>
+        <div class="rocket-bg rocket-bg-3">🚀</div>
+        <div class="rocket-bg rocket-bg-4">🚀</div>
+        <div class="planet planet-1"></div>
+        <div class="planet planet-2"></div>
+
+        <div class="header-top">
+            <h1 class="dimasyyya-title">
+                DimasyyyaFilms
+            </h1>
+            <button class="quiz-header-btn" id="headerQuizBtn">🎮 Викторина</button>
+            <button class="theme-toggle-btn" id="themeToggle">
+                <span class="theme-icon">🌙</span>
+                <span class="theme-text">Тёмная</span>
+            </button>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="movies.html">Фильмы</a></li>
+                <li><a href="series.html">Сериалы</a></li>
+                <li><a href="directors.html">Режиссеры</a></li>
+                <li><a href="actors.html">Актеры</a></li>
+                <li><a href="articles.html">Статьи</a></li>
+                <li><a href="about.html">О нас</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div id="content">
+        <div class="content-section">
+            <h2 class="welcome-title">Добро пожаловать в DimasyyyaFilms!</h2>
+            <p class="welcome-subtitle"><i>Ваш надежный гид в мире кинематографа</i></p>
+        </div>
+
+        <!-- Популярные фильмы -->
+        <section class="carousel-section">
+            <div class="section-header">
+                <h3 class="section-title">🎬 Популярные фильмы</h3>
+                <a href="movies.html" class="view-all-btn">Все фильмы →</a>
+            </div>
+            <div class="carousel-container">
+                <button class="carousel-btn carousel-prev">‹</button>
+                <div class="cards-carousel" id="moviesCarousel">
+                    <div class="movie-card">
+                        <div class="card-image">
+                            <img src="images/pobeg.png" alt="Побег из Шоушенка">
+                            <div class="card-rating">9.1 ⭐</div>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">Побег из Шоушенка</h4>
+                            <p class="card-director">Фрэнк Дарабонт</p>
+                            <p class="card-year">1994</p>
+                            <p class="card-genre">Драма, Криминал</p>
+                            <a href="https://www.kinopoisk.ru/film/326/" class="card-link">Подробнее</a>
+                        </div>
+                    </div>
+
+                    <div class="movie-card">
+                        <div class="card-image">
+                            <img src="images/green.png" alt="Зеленая миля">
+                            <div class="card-rating">9.1 ⭐</div>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">Зеленая миля</h4>
+                            <p class="card-director">Фрэнк Дарабонт</p>
+                            <p class="card-year">1999</p>
+                            <p class="card-genre">Драма, Фэнтези</p>
+                            <a href="https://www.kinopoisk.ru/film/435/" class="card-link">Подробнее</a>
+                        </div>
+                    </div>
+
+                    <div class="movie-card">
+                        <div class="card-image">
+                            <img src="images/batman.png" alt="Темный рыцарь">
+                            <div class="card-rating">8.5 ⭐</div>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">Темный рыцарь</h4>
+                            <p class="card-director">Кристофер Нолан</p>
+                            <p class="card-year">2008</p>
+                            <p class="card-genre">Боевик, Драма</p>
+                            <a href="https://www.kinopoisk.ru/film/111543/" class="card-link">Подробнее</a>
+                        </div>
+                    </div>
+
+                    <div class="movie-card">
+                        <div class="card-image">
+                            <img src="images/forest.png" alt="Форрест Гамп">
+                            <div class="card-rating">8.9 ⭐</div>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">Форрест Гамп</h4>
+                            <p class="card-director">Роберт Земекис</p>
+                            <p class="card-year">1994</p>
+                            <p class="card-genre">Драма, Комедия</p>
+                            <a href="https://www.kinopoisk.ru/film/444/" class="card-link">Подробнее</a>
+                        </div>
+                    </div>
+
+                    <div class="movie-card">
+                        <div class="card-image">
+                            <img src="images/start.png" alt="Начало">
+                            <div class="card-rating">8.7 ⭐</div>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">Начало</h4>
+                            <p class="card-director">Кристофер Нолан</p>
+                            <p class="card-year">2010</p>
+                            <p class="card-genre">Фантастика, Триллер</p>
+                            <a href="https://www.kinopoisk.ru/film/447301/" class="card-link">Подробнее</a>
+                        </div>
+                    </div>
+
+                    <div class="movie-card">
+                        <div class="card-image">
+                            <img src="images/cosmos.png" alt="Интерстеллар">
+                            <div class="card-rating">8.6 ⭐</div>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">Интерстеллар</h4>
+                            <p class="card-director">Кристофер Нолан</p>
+                            <p class="card-year">2014</p>
+                            <p class="card-genre">Фантастика, Драма</p>
+                            <a href="https://www.kinopoisk.ru/film/258687/" class="card-link">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn carousel-next">›</button>
+            </div>
+        </section>
+
+        <!-- Популярные сериалы -->
+        <section class="carousel-section">
+            <div class="section-header">
+                <h3 class="section-title">📺 Популярные сериалы</h3>
+                <a href="series.html" class="view-all-btn">Все сериалы →</a>
+            </div>
+            <div class="carousel-container">
+                <button class="carousel-btn carousel-prev">‹</button>
+                <div class="cards-carousel" id="seriesCarousel">
+                    <div class="movie-card">
+                        <div class="card-image">
+                            <img src="images/bad.png" alt="Во все тяжкие">
+                            <div class="card-rating">8.9 ⭐</div>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">Во все тяжкие</h4>
+                            <p class="card-director">Винс Гиллиган</p>
+                            <p class="card-year">2008-2013</p>
+                            <p class="card-genre">Криминал, Драма</p>
+                            <a href="https://www.kinopoisk.ru/series/404900/" class="card-link">Подробнее</a>
+                        </div>
+                    </div>
+
+                    <div class="movie-card">
+                        <div class="card-image">
+                            <img src="images/game.jpeg" alt="Игра престолов">
+                            <div class="card-rating">9.0 ⭐</div>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">Игра престолов</h4>
+                            <p class="card-director">Дэвид Бениофф</p>
+                            <p class="card-year">2011-2019</p>
+                            <p class="card-genre">Фэнтези, Драма</p>
+                            <a href="https://www.kinopoisk.ru/series/464963/" class="card-link">Подробнее</a>
+                        </div>
+                    </div>
+
+                    <div class="movie-card">
+                        <div class="card-image">
+                            <img src="images/doctor.png" alt="Хороший доктор">
+                            <div class="card-rating">8.0 ⭐</div>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">Хороший доктор</h4>
+                            <p class="card-director">Фредди Хаймор</p>
+                            <p class="card-year">2017-2024</p>
+                            <p class="card-genre">Драма, Медицина</p>
+                            <a href="https://www.kinopoisk.ru/series/1011528/" class="card-link">Подробнее</a>
+                        </div>
+                    </div>
+
+                    <div class="movie-card">
+                        <div class="card-image">
+                            <img src="images/office.jpeg" alt="Офис">
+                            <div class="card-rating">8.8 ⭐</div>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">Офис</h4>
+                            <p class="card-director">Грег Дэниелс</p>
+                            <p class="card-year">2005-2013</p>
+                            <p class="card-genre">Комедия</p>
+                            <a href="https://www.kinopoisk.ru/series/838/" class="card-link">Подробнее</a>
+                        </div>
+                    </div>
+
+                    <div class="movie-card">
+                        <div class="card-image">
+                            <img src="images/friends.png" alt="Друзья">
+                            <div class="card-rating">9.1 ⭐</div>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">Друзья</h4>
+                            <p class="card-director">Марта Кауфман</p>
+                            <p class="card-year">1994-2004</p>
+                            <p class="card-genre">Комедия, Мелодрама</p>
+                            <a href="https://www.kinopoisk.ru/series/77044/" class="card-link">Подробнее</a>
+                        </div>
+                    </div>
+
+                    <div class="movie-card">
+                        <div class="card-image">
+                            <img src="images/mirror.png" alt="Черное зеркало">
+                            <div class="card-rating">8.7 ⭐</div>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">Черное зеркало</h4>
+                            <p class="card-director">Чарли Брукер</p>
+                            <p class="card-year">2011-2023</p>
+                            <p class="card-genre">Фантастика, Триллер</p>
+                            <a href="https://www.kinopoisk.ru/series/443073/" class="card-link">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn carousel-next">›</button>
+            </div>
+        </section>
+
+        <!-- Топ режиссеры -->
+        <section class="carousel-section">
+            <div class="section-header">
+                <h3 class="section-title">🎥 Топ режиссеры</h3>
+                <a href="directors.html" class="view-all-btn">Все режиссеры →</a>
+            </div>
+            <div class="carousel-container">
+                <button class="carousel-btn carousel-prev">‹</button>
+                <div class="cards-carousel" id="directorsCarousel">
+                    <div class="person-card">
+                        <div class="card-image">
+                            <img src="images/frank.png" alt="Фрэнк Дарабонт">
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">Фрэнк Дарабонт</h4>
+                            <p class="card-films"><i>Побег из Шоушенка, Зеленая миля</i></p>
+                            <p class="card-style">Драма, психологическое кино</p>
+                            <a href="directors.html#darabont" class="card-link">Подробнее</a>
+                        </div>
+                    </div>
+
+                    <div class="person-card">
+                        <div class="card-image">
+                            <img src="images/nolan.png" alt="Кристофер Нолан">
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">Кристофер Нолан</h4>
+                            <p class="card-films"><i>Темный рыцарь, Начало, Интерстеллар</i></p>
+                            <p class="card-style">Научная фантастика, нелинейное повествование</p>
+                            <a href="directors.html#nolan" class="card-link">Подробнее</a>
+                        </div>
+                    </div>
+
+                    <div class="person-card">
+                        <div class="card-image">
+                            <img src="images/gilligan.png" alt="Винс Гиллиган">
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">Винс Гиллиган</h4>
+                            <p class="card-films"><i>Во все тяжкие, Лучше звоните Солу</i></p>
+                            <p class="card-style">Криминальная драма, антигерои</p>
+                            <a href="directors.html#gilligan" class="card-link">Подробнее</a>
+                        </div>
+                    </div>
+
+                    <div class="person-card">
+                        <div class="card-image">
+                            <img src="images/spillberg.jpeg" alt="Стивен Спилберг">
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">Стивен Спилберг</h4>
+                            <p class="card-films"><i>Список Шиндлера, Парк Юрского периода</i></p>
+                            <p class="card-style">Приключения, драма, фантастика</p>
+                            <a href="directors.html#spielberg" class="card-link">Подробнее</a>
+                        </div>
+                    </div>
+
+                    <div class="person-card">
+                        <div class="card-image">
+                            <img src="images/tarantino.png" alt="Квентин Тарантино">
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">Квентин Тарантино</h4>
+                            <p class="card-films"><i>Криминальное чтиво, Бесславные ублюдки</i></p>
+                            <p class="card-style">Криминал, нелинейное повествование</p>
+                            <a href="directors.html#tarantino" class="card-link">Подробнее</a>
+                        </div>
+                    </div>
+
+                    <div class="person-card">
+                        <div class="card-image">
+                            <img src="images/martin.png" alt="Мартин Скорсезе">
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">Мартин Скорсезе</h4>
+                            <p class="card-films"><i>Отступники, Волк с Уолл-стрит</i></p>
+                            <p class="card-style">Криминальная драма, гангстеры</p>
+                            <a href="directors.html#scorsese" class="card-link">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn carousel-next">›</button>
+            </div>
+        </section>
+
+        <!-- Известные актеры -->
+        <section class="carousel-section">
+            <div class="section-header">
+                <h3 class="section-title">🌟 Известные актеры</h3>
+                <a href="actors.html" class="view-all-btn">Все актеры →</a>
+            </div>
+            <div class="carousel-container">
+                <button class="carousel-btn carousel-prev">‹</button>
+                <div class="cards-carousel" id="actorsCarousel">
+                    <div class="person-card">
+                        <div class="card-image">
+                            <img src="images/tim.png" alt="Тим Роббинс">
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">Тим Роббинс</h4>
+                            <p class="card-films"><i>Энди Дюфрейн (Побег из Шоушенка)</i></p>
+                            <p class="card-awards">Оскар, Золотой глобус</p>
+                            <a href="actors.html#robbins" class="card-link">Подробнее</a>
+                        </div>
+                    </div>
+
+                    <div class="person-card">
+                        <div class="card-image">
+                            <img src="images/tom.png" alt="Том Хэнкс">
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">Том Хэнкс</h4>
+                            <p class="card-films"><i>Форрест Гамп, Пол Аллен (Зеленая миля)</i></p>
+                            <p class="card-awards">2 Оскара, 4 Золотых глобуса</p>
+                            <a href="actors.html#hanks" class="card-link">Подробнее</a>
+                        </div>
+                    </div>
+
+                    <div class="person-card">
+                        <div class="card-image">
+                            <img src="images/bale.png" alt="Кристиан Бэйл">
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">Кристиан Бэйл</h4>
+                            <p class="card-films"><i>Брюс Уэйн (Темный рыцарь), Патрик Бэйтмен</i></p>
+                            <p class="card-awards">Оскар, Золотой глобус</p>
+                            <a href="actors.html#bale" class="card-link">Подробнее</a>
+                        </div>
+                    </div>
+
+                    <div class="person-card">
+                        <div class="card-image">
+                            <img src="images/leo.png" alt="Леонардо ДиКаприо">
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">Леонардо ДиКаприо</h4>
+                            <p class="card-films"><i>Титаник, Начало, Выживший</i></p>
+                            <p class="card-awards">Оскар, 3 Золотых глобуса</p>
+                            <a href="actors.html#dicaprio" class="card-link">Подробнее</a>
+                        </div>
+                    </div>
+
+                    <div class="person-card">
+                        <div class="card-image">
+                            <img src="images/meril.png" alt="Мерил Стрип">
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">Мерил Стрип</h4>
+                            <p class="card-films"><i>Крамер против Крамера, Железная леди</i></p>
+                            <p class="card-awards">3 Оскара, 8 Золотых глобусов</p>
+                            <a href="actors.html#streep" class="card-link">Подробнее</a>
+                        </div>
+                    </div>
+
+                    <div class="person-card">
+                        <div class="card-image">
+                            <img src="images/robert.jpeg" alt="Роберт Дауни-мл.">
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">Роберт Дауни-мл.</h4>
+                            <p class="card-films"><i>Железный человек, Шерлок Холмс</i></p>
+                            <p class="card-awards">Золотой глобус, BAFTA</p>
+                            <a href="actors.html#downey" class="card-link">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn carousel-next">›</button>
+            </div>
+        </section>
+
+        <!-- Статьи -->
+        <section class="articles-section">
+            <div class="section-header">
+                <h3 class="section-title">📝 Свежие статьи</h3>
+                <a href="articles.html" class="view-all-btn">Все статьи →</a>
+            </div>
+            <div class="articles-grid">
+                <article class="article-card">
+                    <h4 class="article-title"><a href="articles.html#article1">Анализ творчества Фрэнка Дарабонта</a></h4>
+                    <p class="article-excerpt">Как мастер создает шедевры из литературных произведений Стивена Кинга</p>
+                    <span class="article-date">05.10.2025</span>
+                </article>
+
+                <article class="article-card">
+                    <h4 class="article-title"><a href="articles.html#article2">Эволюция супергеройского кино</a></h4>
+                    <p class="article-excerpt">От комиксов к голливудским блокбастерам: путь длиной в 80 лет</p>
+                    <span class="article-date">04.10.2025</span>
+                </article>
+
+                <article class="article-card">
+                    <h4 class="article-title"><a href="articles.html#article3">Медицинские драмы: реализм и вымысел</a></h4>
+                    <p class="article-excerpt">Разбор сериала "Хороший доктор" с точки зрения медицинской точности</p>
+                    <span class="article-date">01.10.2025</span>
+                </article>
+
+                <article class="article-card">
+                    <h4 class="article-title"><a href="articles.html#article4">Нелинейное повествование в кино</a></h4>
+                    <p class="article-excerpt">Как Кристофер Нолан меняет восприятие времени и реальности</p>
+                    <span class="article-date">29.09.2025</span>
+                </article>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p><i>«Кино должно заставить зрителя забыть о том, что он сидит в кино».</i> - © 2025 Dimasyyya. Сделано с надеждой на 5 по курсовой ❤️</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/quiz.js"></script>
+</body>
+</html>

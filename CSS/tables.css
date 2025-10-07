@@ -1,0 +1,237 @@
+/* === СТИЛИ ДЛЯ ТАБЛИЧНЫХ СТРАНИЦ === */
+
+/* Улучшенные стили для таблиц на страницах сериалов, актеров, режиссеров */
+.table-page {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.search-sort-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0;
+    gap: 20px;
+    flex-wrap: wrap;
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.search-form {
+    display: flex;
+    gap: 10px;
+    flex-grow: 1;
+}
+
+.search-form input[type="text"] {
+    flex-grow: 1;
+    padding: 12px 20px;
+    border: 2px solid var(--border-color);
+    border-radius: 25px;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.search-form input[type="text"]:focus {
+    border-color: var(--text-accent);
+    box-shadow: 0 0 10px rgba(255, 107, 53, 0.3);
+}
+
+.sort-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+}
+
+.sort-container select {
+    padding: 10px 15px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sort-container select:focus {
+    border-color: var(--text-accent);
+}
+
+/* Улучшенные таблицы для сериалов/актеров/режиссеров */
+.enhanced-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+    background: var(--table-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    border: 1px solid var(--border-color);
+}
+
+.enhanced-table th {
+    background: linear-gradient(135deg, var(--text-accent), var(--text-accent-light));
+    color: #000;
+    padding: 20px 15px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    border-bottom: 3px solid var(--text-accent-light);
+}
+
+.enhanced-table td {
+    padding: 18px 15px;
+    border-bottom: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    color: var(--text-primary);
+}
+
+/* Специфические стили для колонок */
+.column-title {
+    font-weight: 700;
+    color: var(--text-secondary);
+}
+
+.column-rating {
+    text-align: center;
+    font-weight: 700;
+}
+
+.column-actions {
+    text-align: center;
+}
+
+/* Стили для details/iframe в таблицах */
+details {
+    margin-top: 10px;
+}
+
+details summary {
+    cursor: pointer;
+    color: var(--text-accent);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+details summary:hover {
+    color: var(--text-accent-light);
+}
+
+details iframe {
+    margin-top: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+/* Адаптивность для таблиц */
+@media (max-width: 1024px) {
+    .enhanced-table {
+        font-size: 0.9em;
+    }
+    
+    .enhanced-table th,
+    .enhanced-table td {
+        padding: 12px 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .search-sort-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .search-form {
+        order: 2;
+    }
+    
+    .sort-container {
+        order: 1;
+        justify-content: space-between;
+    }
+    
+    /* Скрываем некоторые колонки на мобильных */
+    .enhanced-table .column-birthdate,
+    .enhanced-table .column-country,
+    .enhanced-table .column-episodes {
+        display: none;
+    }
+}
+
+/* Анимации для табличных страниц */
+.table-page h2 {
+    text-align: center;
+    margin: 40px 0 30px;
+    font-size: 2.5em;
+    color: var(--text-secondary);
+    opacity: 0;
+    animation: slideDown 0.8s ease-out 0.3s forwards;
+}
+
+.search-sort-container {
+    opacity: 0;
+    animation: slideUp 0.6s ease-out 0.5s forwards;
+}
+
+.enhanced-table {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUp 0.8s ease-out 0.7s forwards;
+}
+
+@keyframes slideDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Стили для форм поиска на табличных страницах */
+.search-form {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.search-form input[type="text"] {
+    flex-grow: 1;
+    padding: 12px 20px;
+    border: 2px solid var(--border-color);
+    border-radius: 25px;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+/* Стили для select на табличных страницах */
+.sort-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.sort-container select {
+    padding: 10px 15px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    cursor: pointer;
+}

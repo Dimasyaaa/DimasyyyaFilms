@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DimasyyyaFilms - Фильмы</title>
+    <link rel="stylesheet" href="CSS/global.css">
+    <link rel="stylesheet" href="CSS/carousels.css">
+    <link rel="stylesheet" href="CSS/tables.css">
+    <link rel="stylesheet" href="CSS/quiz.css">
+</head>
+<body>
+    <header>
+        <!-- Космические элементы фона -->
+        <div class="rocket-bg rocket-bg-1">🚀</div>
+        <div class="rocket-bg rocket-bg-2">🚀</div>
+        <div class="rocket-bg rocket-bg-3">🚀</div>
+        <div class="rocket-bg rocket-bg-4">🚀</div>
+        <div class="planet planet-1"></div>
+        <div class="planet planet-2"></div>
+
+        <div class="header-top">
+            <h1 class="dimasyyya-title">
+                DimasyyyaFilms
+            </h1>
+            <button class="quiz-header-btn" id="headerQuizBtn" onclick="startQuiz()">
+                🎮 Викторина
+            </button>
+            <button class="theme-toggle-btn" id="themeToggle">
+                <span class="theme-icon">🌙</span>
+                <span class="theme-text">Тёмная</span>
+            </button>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="movies.html">Фильмы</a></li>
+                <li><a href="series.html">Сериалы</a></li>
+                <li><a href="directors.html">Режиссеры</a></li>
+                <li><a href="actors.html">Актеры</a></li>
+                <li><a href="articles.html">Статьи</a></li>
+                <li><a href="about.html">О нас</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div id="content">
+        <h2>🎥 Каталог фильмов</h2>
+        
+        <div>
+            <form action="#" method="get">
+                <input type="text" name="search" placeholder="Поиск фильмов...">
+                <input type="submit" value="Найти">
+            </form>
+            <span>
+                Сортировать по: 
+                <select>
+                    <option value="title">Названию</option>
+                    <option value="genry">Жанру</option>
+                    <option value="year">Году</option>
+                    <option value="rating">Рейтингу</option>
+                </select>
+            </span>
+        </div>
+
+        <table>
+            <tr>
+                <th>Название</th>
+                <th>Режиссер</th>
+                <th>Год</th>
+                <th>Жанр</th>
+                <th>Рейтинг</th>
+                <th>Длительность</th>
+                <th>Дополнительно</th>
+            </tr>
+            <tr>
+                <td><strong>Побег из Шоушенка</strong></td>
+                <td>Фрэнк Дарабонт</td>
+                <td>1994</td>
+                <td>Драма</td>
+                <td>9.1 ⭐</td>
+                <td>142 мин</td>
+                <td>
+                    <a href="https://www.kinopoisk.ru/film/326/">Подробнее</a> | 
+                    <details>
+                        <summary>Смотреть трейлер</summary>
+                        <iframe width="300" height="169" src="https://www.youtube.com/watch?v=d03SayeEuxs" frameborder="0" allowfullscreen></iframe>
+                    </details>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Зеленая миля</strong></td>
+                <td>Фрэнк Дарабонт</td>
+                <td>1999</td>
+                <td>Драма, Фэнтези</td>
+                <td>9.2 ⭐</td>
+                <td>189 мин</td>
+                <td>
+                    <a href="https://www.kinopoisk.ru/film/435/">Подробнее</a> | 
+                    <details>
+                        <summary>Смотреть трейлер</summary>
+                        <iframe width="300" height="169" src="https://www.youtube.com/embed/Ki4haFrqSrw" frameborder="0" allowfullscreen></iframe>
+                    </details>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Темный рыцарь</strong></td>
+                <td>Кристофер Нолан</td>
+                <td>2008</td>
+                <td>Боевик, Криминал, Драма</td>
+                <td>8.5 ⭐</td>
+                <td>152 мин</td>
+                <td>
+                    <a href="https://www.kinopoisk.ru/film/111543/">Подробнее</a> | 
+                    <details>
+                        <summary>Смотреть трейлер</summary>
+                        <iframe width="300" height="169" src="https://www.youtube.com/embed/UMgb3hQCb08" frameborder="0" allowfullscreen></iframe>
+                    </details>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Dimasyyya. Сделано с надеждой на 5 по курсовой❤️</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/quiz.js"></script>
+    
+</body>
+</html>
