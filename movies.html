@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DimasyyyaFilms - Фильмы</title>
     <link rel="stylesheet" href="CSS/global.css">
-    <link rel="stylesheet" href="CSS/carousels.css">
-    <link rel="stylesheet" href="CSS/tables.css">
     <link rel="stylesheet" href="CSS/quiz.css">
+    <link rel="stylesheet" href="CSS/search.css">
 </head>
 <body>
     <header>
@@ -23,7 +22,7 @@
             <h1 class="dimasyyya-title">
                 DimasyyyaFilms
             </h1>
-            <button class="quiz-header-btn" id="headerQuizBtn" onclick="startQuiz()">
+            <button class="quiz-header-btn" id="headerQuizBtn">
                 🎮 Викторина
             </button>
             <button class="theme-toggle-btn" id="themeToggle">
@@ -44,82 +43,90 @@
             </ul>
         </nav>
     </header>
-    
-    <div id="content">
-        <h2>🎥 Каталог фильмов</h2>
-        
-        <div>
-            <form action="#" method="get">
-                <input type="text" name="search" placeholder="Поиск фильмов...">
-                <input type="submit" value="Найти">
-            </form>
-            <span>
-                Сортировать по: 
-                <select>
-                    <option value="title">Названию</option>
-                    <option value="genry">Жанру</option>
-                    <option value="year">Году</option>
-                    <option value="rating">Рейтингу</option>
-                </select>
-            </span>
-        </div>
+        <!-- Популярные фильмы -->
+        <section class="cards-section">
+            <h3 class="section-title">⭐ Популярные фильмы</h3>
+            <div class="cards-grid" id="moviesGrid">
+                <!-- Карточки фильмов -->
+                <div class="movie-card" data-title="побег из шоушенка" data-year="1994" data-genre="драма" data-rating="9.1">
+                    <div class="card-image">
+                        <img src="images/pobeg.png" alt="Побег из Шоушенка">
+                        <div class="card-rating">9.1 ⭐</div>
+                        <button class="card-like-btn">🤍</button>
+                    </div>
+                    <div class="card-content">
+                        <h4 class="card-title">Побег из Шоушенка</h4>
+                        <p class="card-director">Фрэнк Дарабонт</p>
+                        <div class="card-info">
+                            <span class="card-year">1994</span>
+                            <span class="card-genre">Драма</span>
+                            <span class="card-duration">142 мин</span>
+                        </div>
+                        <p class="card-description">Банкир Энди Дюфрейн обвинён в убийстве собственной жены и её любовника. Оказавшись в тюрьме под названием Шоушенк, он сталкивается с жестокостью и беззаконием, царящими по обе стороны решётки.</p>
+                        <div class="card-actions">
+                            <a href="https://www.kinopoisk.ru/film/326/" class="card-link" target="_blank">Подробнее</a>
+                            <button class="card-trailer-btn" data-trailer="https://www.youtube.com/embed/d03SayeEuxs">Трейлер</button>
+                        </div>
+                    </div>
+                </div>
 
-        <table>
-            <tr>
-                <th>Название</th>
-                <th>Режиссер</th>
-                <th>Год</th>
-                <th>Жанр</th>
-                <th>Рейтинг</th>
-                <th>Длительность</th>
-                <th>Дополнительно</th>
-            </tr>
-            <tr>
-                <td><strong>Побег из Шоушенка</strong></td>
-                <td>Фрэнк Дарабонт</td>
-                <td>1994</td>
-                <td>Драма</td>
-                <td>9.1 ⭐</td>
-                <td>142 мин</td>
-                <td>
-                    <a href="https://www.kinopoisk.ru/film/326/">Подробнее</a> | 
-                    <details>
-                        <summary>Смотреть трейлер</summary>
-                        <iframe width="300" height="169" src="https://www.youtube.com/watch?v=d03SayeEuxs" frameborder="0" allowfullscreen></iframe>
-                    </details>
-                </td>
-            </tr>
-            <tr>
-                <td><strong>Зеленая миля</strong></td>
-                <td>Фрэнк Дарабонт</td>
-                <td>1999</td>
-                <td>Драма, Фэнтези</td>
-                <td>9.2 ⭐</td>
-                <td>189 мин</td>
-                <td>
-                    <a href="https://www.kinopoisk.ru/film/435/">Подробнее</a> | 
-                    <details>
-                        <summary>Смотреть трейлер</summary>
-                        <iframe width="300" height="169" src="https://www.youtube.com/embed/Ki4haFrqSrw" frameborder="0" allowfullscreen></iframe>
-                    </details>
-                </td>
-            </tr>
-            <tr>
-                <td><strong>Темный рыцарь</strong></td>
-                <td>Кристофер Нолан</td>
-                <td>2008</td>
-                <td>Боевик, Криминал, Драма</td>
-                <td>8.5 ⭐</td>
-                <td>152 мин</td>
-                <td>
-                    <a href="https://www.kinopoisk.ru/film/111543/">Подробнее</a> | 
-                    <details>
-                        <summary>Смотреть трейлер</summary>
-                        <iframe width="300" height="169" src="https://www.youtube.com/embed/UMgb3hQCb08" frameborder="0" allowfullscreen></iframe>
-                    </details>
-                </td>
-            </tr>
-        </table>
+                <div class="movie-card" data-title="зеленая миля" data-year="1999" data-genre="драма фэнтези" data-rating="9.2">
+                    <div class="card-image">
+                        <img src="images/green.png" alt="Зеленая миля">
+                        <div class="card-rating">9.2 ⭐</div>
+                        <button class="card-like-btn">🤍</button>
+                    </div>
+                    <div class="card-content">
+                        <h4 class="card-title">Зеленая миля</h4>
+                        <p class="card-director">Фрэнк Дарабонт</p>
+                        <div class="card-info">
+                            <span class="card-year">1999</span>
+                            <span class="card-genre">Драма, Фэнтези</span>
+                            <span class="card-duration">189 мин</span>
+                        </div>
+                        <p class="card-description">Пол Эджкомб — начальник блока смертников в тюрьме «Холодная гора», каждый из узников которого однажды проходит «зеленую милю» по пути к месту казни. Пол повидал много заключённых, но никогда не встречал такого, как Джон Коффи.</p>
+                        <div class="card-actions">
+                            <a href="https://www.kinopoisk.ru/film/435/" class="card-link" target="_blank">Подробнее</a>
+                            <button class="card-trailer-btn" data-trailer="https://www.youtube.com/embed/Ki4haFrqSrw">Трейлер</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="movie-card" data-title="темный рыцарь" data-year="2008" data-genre="боевик криминал драма" data-rating="8.5">
+                    <div class="card-image">
+                        <img src="images/batman.png" alt="Темный рыцарь">
+                        <div class="card-rating">8.5 ⭐</div>
+                        <button class="card-like-btn">🤍</button>
+                    </div>
+                    <div class="card-content">
+                        <h4 class="card-title">Темный рыцарь</h4>
+                        <p class="card-director">Кристофер Нолан</p>
+                        <div class="card-info">
+                            <span class="card-year">2008</span>
+                            <span class="card-genre">Боевик, Криминал, Драма</span>
+                            <span class="card-duration">152 мин</span>
+                        </div>
+                        <p class="card-description">Бэтмен поднимает ставки в войне с криминалом. С помощью лейтенанта Джима Гордона и прокурора Харви Дента он намерен очистить улицы от преступности, отравляющей город.</p>
+                        <div class="card-actions">
+                            <a href="https://www.kinopoisk.ru/film/111543/" class="card-link" target="_blank">Подробнее</a>
+                            <button class="card-trailer-btn" data-trailer="https://www.youtube.com/embed/UMgb3hQCb08">Трейлер</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Добавьте больше фильмов по аналогии -->
+            </div>
+        </section>
+
+        <!-- Модальное окно для трейлера -->
+        <div id="trailerModal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <button class="modal-close" id="trailerModalClose">✕</button>
+                <div class="modal-body">
+                    <iframe id="trailerVideo" width="800" height="450" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
     </div>
     
     <footer>
@@ -128,6 +135,6 @@
 
     <script src="js/main.js"></script>
     <script src="js/quiz.js"></script>
-    
+    <script src="js/search.js"></script>
 </body>
 </html>
