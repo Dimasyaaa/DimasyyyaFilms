@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Топ-10 - DimasyyyaFilms</title>
+    <link rel="stylesheet" href="CSS/global.css">
+    <link rel="stylesheet" href="CSS/menu-styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Космические элементы фона -->
+        <div class="rocket-bg rocket-bg-1">🚀</div>
+        <div class="rocket-bg rocket-bg-2">🚀</div>
+        <div class="rocket-bg rocket-bg-3">🚀</div>
+        <div class="rocket-bg rocket-bg-4">🚀</div>
+        <div class="planet planet-1"></div>
+        <div class="planet planet-2"></div>
+
+        <header class="header">
+            <div class="header-images">
+                <div class="header-image"><img src="images/popcorn.jpeg" alt="Попкорн"></div>
+                <div class="header-image"><img src="images/film.jpeg" alt="табличка"></div>
+                <div class="header-image"><img src="images/camera.png" alt="камера"></div>
+                <div class="header-image"><img src="images/kreslo.jpeg" alt="Кресло"></div>
+            </div>
+            
+            <div class="header-top">
+                <h1 class="dimasyyya-title">DimasyyyaFilms</h1>
+                <div class="header-controls">
+                    <button class="theme-toggle-btn" id="themeToggle">
+                        <span class="theme-icon">🌙</span>
+                        <span class="theme-text">Тёмная</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        
+        <nav class="horizontal-menu">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="movies.html">Фильмы</a></li>
+                <li><a href="series.html">Сериалы</a></li>
+                <li><a href="directors.html">Режиссеры</a></li>
+                <li><a href="actors.html">Актеры</a></li>
+                <li><a href="articles.html">Статьи</a></li>
+                <li><a href="about.html">О нас</a></li>
+            </ul>
+        </nav>
+        
+        <div class="main-content">
+            <!-- Левая колонка -->
+            <aside class="left-column">
+                <div class="vertical-menu">
+                    <h3>Меню</h3>
+                    <ul>
+                        <li><a href="new.html">Новинки</a></li>
+                        <li><a href="top.html" class="active">Топ-10</a></li>
+                        <li><a href="genres.html">По жанрам</a></li>
+                        <li><a href="years.html">По годам</a></li>
+                        <li><a href="countries.html">По странам</a></li>
+                        <li><a href="awards.html">Награды</a></li>
+                    </ul>
+                </div>
+                
+                <div class="login-form">
+                    <h3>Вход на сайт</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="login">Логин:</label>
+                            <input type="text" id="login" name="login">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Пароль:</label>
+                            <input type="password" id="password" name="password">
+                        </div>
+                        <button type="submit" class="login-btn">Войти</button>
+                    </form>
+                </div>
+            </aside>
+            
+            <!-- Центральная колонка -->
+            <main class="center-column">
+                <div class="menu-page">
+                    <div class="page-header">
+                        <h1 class="page-title">🏆 Топ-10 фильмов всех времен</h1>
+                        <p class="page-subtitle">Лучшие фильмы по версии кинокритиков и зрителей со всего мира</p>
+                    </div>
+
+                    <!-- Топ-10 таблица -->
+                    <table class="ranking-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Фильм</th>
+                                <th>Год</th>
+                                <th>Режиссер</th>
+                                <th>Рейтинг</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="ranking-position">1</td>
+                                <td><strong>Побег из Шоушенка</strong></td>
+                                <td>1994</td>
+                                <td>Фрэнк Дарабонт</td>
+                                <td><span class="ranking-rating">9.3 ⭐</span></td>
+                            </tr>
+                            <tr>
+                                <td class="ranking-position">2</td>
+                                <td><strong>Крестный отец</strong></td>
+                                <td>1972</td>
+                                <td>Фрэнсис Форд Коппола</td>
+                                <td><span class="ranking-rating">9.2 ⭐</span></td>
+                            </tr>
+                            <tr>
+                                <td class="ranking-position">3</td>
+                                <td><strong>Темный рыцарь</strong></td>
+                                <td>2008</td>
+                                <td>Кристофер Нолан</td>
+                                <td><span class="ranking-rating">9.0 ⭐</span></td>
+                            </tr>
+                            <tr>
+                                <td class="ranking-position">4</td>
+                                <td><strong>Крестный отец 2</strong></td>
+                                <td>1974</td>
+                                <td>Фрэнсис Форд Коппола</td>
+                                <td><span class="ranking-rating">9.0 ⭐</span></td>
+                            </tr>
+                            <tr>
+                                <td class="ranking-position">5</td>
+                                <td><strong>12 разгневанных мужчин</strong></td>
+                                <td>1957</td>
+                                <td>Сидни Люмет</td>
+                                <td><span class="ranking-rating">9.0 ⭐</span></td>
+                            </tr>
+                            <tr>
+                                <td class="ranking-position">6</td>
+                                <td><strong>Список Шиндлера</strong></td>
+                                <td>1993</td>
+                                <td>Стивен Спилберг</td>
+                                <td><span class="ranking-rating">8.9 ⭐</span></td>
+                            </tr>
+                            <tr>
+                                <td class="ranking-position">7</td>
+                                <td><strong>Властелин колец: Возвращение короля</strong></td>
+                                <td>2003</td>
+                                <td>Питер Джексон</td>
+                                <td><span class="ranking-rating">8.9 ⭐</span></td>
+                            </tr>
+                            <tr>
+                                <td class="ranking-position">8</td>
+                                <td><strong>Криминальное чтиво</strong></td>
+                                <td>1994</td>
+                                <td>Квентин Тарантино</td>
+                                <td><span class="ranking-rating">8.9 ⭐</span></td>
+                            </tr>
+                            <tr>
+                                <td class="ranking-position">9</td>
+                                <td><strong>Властелин колец: Братство кольца</strong></td>
+                                <td>2001</td>
+                                <td>Питер Джексон</td>
+                                <td><span class="ranking-rating">8.8 ⭐</span></td>
+                            </tr>
+                            <tr>
+                                <td class="ranking-position">10</td>
+                                <td><strong>Хороший, плохой, злой</strong></td>
+                                <td>1966</td>
+                                <td>Серджио Леоне</td>
+                                <td><span class="ranking-rating">8.8 ⭐</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- Топ сериалов -->
+                    <div class="page-header" style="margin-top: 60px;">
+                        <h2 class="page-title">📺 Топ-10 сериалов</h2>
+                        <p class="page-subtitle">Лучшие телевизионные шоу по мнению критиков и зрителей</p>
+                    </div>
+
+                    <table class="ranking-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Сериал</th>
+                                <th>Годы</th>
+                                <th>Создатель</th>
+                                <th>Рейтинг</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="ranking-position">1</td>
+                                <td><strong>Во все тяжкие</strong></td>
+                                <td>2008-2013</td>
+                                <td>Винс Гиллиган</td>
+                                <td><span class="ranking-rating">9.5 ⭐</span></td>
+                            </tr>
+                            <tr>
+                                <td class="ranking-position">2</td>
+                                <td><strong>Клан Сопрано</strong></td>
+                                <td>1999-2007</td>
+                                <td>Дэвид Чейз</td>
+                                <td><span class="ranking-rating">9.2 ⭐</span></td>
+                            </tr>
+                            <tr>
+                                <td class="ranking-position">3</td>
+                                <td><strong>Корона</strong></td>
+                                <td>2016-2023</td>
+                                <td>Питер Морган</td>
+                                <td><span class="ranking-rating">8.7 ⭐</span></td>
+                            </tr>
+                            <tr>
+                                <td class="ranking-position">4</td>
+                                <td><strong>Игра престолов</strong></td>
+                                <td>2011-2019</td>
+                                <td>Дэвид Бениофф</td>
+                                <td><span class="ranking-rating">9.3 ⭐</span></td>
+                            </tr>
+                            <tr>
+                                <td class="ranking-position">5</td>
+                                <td><strong>Черное зеркало</strong></td>
+                                <td>2011-н.в.</td>
+                                <td>Чарли Брукер</td>
+                                <td><span class="ranking-rating">8.8 ⭐</span></td>
+                            </tr>
+                            <tr>
+                                <td class="ranking-position">6</td>
+                                <td><strong>Друзья</strong></td>
+                                <td>1994-2004</td>
+                                <td>Марта Кауфман</td>
+                                <td><span class="ranking-rating">8.9 ⭐</span></td>
+                            </tr>
+                            <tr>
+                                <td class="ranking-position">7</td>
+                                <td><strong>Офис</strong></td>
+                                <td>2005-2013</td>
+                                <td>Грег Дэниелс</td>
+                                <td><span class="ranking-rating">8.9 ⭐</span></td>
+                            </tr>
+                            <tr>
+                                <td class="ranking-position">8</td>
+                                <td><strong>Настоящий детектив</strong></td>
+                                <td>2014-н.в.</td>
+                                <td>Ник Пиццолатто</td>
+                                <td><span class="ranking-rating">8.9 ⭐</span></td>
+                            </tr>
+                            <tr>
+                                <td class="ranking-position">9</td>
+                                <td><strong>Ходячие мертвецы</strong></td>
+                                <td>2010-2022</td>
+                                <td>Фрэнк Дарабонт</td>
+                                <td><span class="ranking-rating">8.2 ⭐</span></td>
+                            </tr>
+                            <tr>
+                                <td class="ranking-position">10</td>
+                                <td><strong>Секретные материалы</strong></td>
+                                <td>1993-2018</td>
+                                <td>Крис Картер</td>
+                                <td><span class="ranking-rating">8.6 ⭐</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+            
+        </div>
+        
+        <footer class="footer">
+            <p><i>«Кино должно заставить зрителя забыть о том, что он сидит в кино».</i> - © 2025 Dimasyyya. Сделано с надеждой на 5 по курсовой ❤️</p>
+        </footer>
+    </div>
+
+    <button class="back-to-top" id="backToTop">↑</button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

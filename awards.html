@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Награды - DimasyyyaFilms</title>
+    <link rel="stylesheet" href="CSS/global.css">
+    <link rel="stylesheet" href="CSS/menu-styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Космические элементы фона -->
+        <div class="rocket-bg rocket-bg-1">🚀</div>
+        <div class="rocket-bg rocket-bg-2">🚀</div>
+        <div class="rocket-bg rocket-bg-3">🚀</div>
+        <div class="rocket-bg rocket-bg-4">🚀</div>
+        <div class="planet planet-1"></div>
+        <div class="planet planet-2"></div>
+
+        <header class="header">
+            <div class="header-images">
+                <div class="header-image"><img src="images/popcorn.jpeg" alt="Попкорн"></div>
+                <div class="header-image"><img src="images/film.jpeg" alt="табличка"></div>
+                <div class="header-image"><img src="images/camera.png" alt="камера"></div>
+                <div class="header-image"><img src="images/kreslo.jpeg" alt="Кресло"></div>
+            </div>
+            
+            <div class="header-top">
+                <h1 class="dimasyyya-title">DimasyyyaFilms</h1>
+                <div class="header-controls">
+                    <button class="theme-toggle-btn" id="themeToggle">
+                        <span class="theme-icon">🌙</span>
+                        <span class="theme-text">Тёмная</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        
+        <nav class="horizontal-menu">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="movies.html">Фильмы</a></li>
+                <li><a href="series.html">Сериалы</a></li>
+                <li><a href="directors.html">Режиссеры</a></li>
+                <li><a href="actors.html">Актеры</a></li>
+                <li><a href="articles.html">Статьи</a></li>
+                <li><a href="about.html">О нас</a></li>
+            </ul>
+        </nav>
+        
+        <div class="main-content">
+            <!-- Левая колонка -->
+            <aside class="left-column">
+                <div class="vertical-menu">
+                    <h3>Меню</h3>
+                    <ul>
+                        <li><a href="new.html">Новинки</a></li>
+                        <li><a href="top.html">Топ-10</a></li>
+                        <li><a href="genres.html">По жанрам</a></li>
+                        <li><a href="years.html">По годам</a></li>
+                        <li><a href="countries.html">По странам</a></li>
+                        <li><a href="awards.html" class="active">Награды</a></li>
+                    </ul>
+                </div>
+                
+                <div class="login-form">
+                    <h3>Вход на сайт</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="login">Логин:</label>
+                            <input type="text" id="login" name="login">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Пароль:</label>
+                            <input type="password" id="password" name="password">
+                        </div>
+                        <button type="submit" class="login-btn">Войти</button>
+                    </form>
+                </div>
+            </aside>
+            
+            <!-- Центральная колонка -->
+            <main class="center-column">
+                <div class="menu-page">
+                    <div class="page-header">
+                        <h1 class="page-title">🏆 Кинопремии и награды</h1>
+                        <p class="page-subtitle">Лауреаты и номинанты главных кинематографических премий</p>
+                    </div>
+
+                    <!-- Фильтры по премиям -->
+                    <div class="filters-section">
+                        <div class="filter-group">
+                            <label class="filter-label">Выберите премию:</label>
+                            <select class="filter-select">
+                                <option value="">Все премии</option>
+                                <option value="oscar">Оскар</option>
+                                <option value="golden-globe">Золотой глобус</option>
+                                <option value="bafta">BAFTA</option>
+                                <option value="cannes">Каннский кинофестиваль</option>
+                                <option value="venice">Венецианский кинофестиваль</option>
+                                <option value="berlin">Берлинский кинофестиваль</option>
+                                <option value="cesar">Сезар</option>
+                                <option value="goya">Гойя</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label class="filter-label">Год:</label>
+                            <select class="filter-select">
+                                <option value="">Все годы</option>
+                                <option value="2024">2024</option>
+                                <option value="2023">2023</option>
+                                <option value="2022">2022</option>
+                                <option value="2021">2021</option>
+                                <option value="2020">2020</option>
+                                <option value="2019">2019</option>
+                                <option value="2018">2018</option>
+                            </select>
+                        </div>
+                        <div class="filter-actions">
+                            <button class="filter-btn apply">Применить фильтры</button>
+                            <button class="filter-btn">Сбросить</button>
+                        </div>
+                    </div>
+
+                    <!-- Список премий -->
+                    <div class="categories-list">
+                        <a href="#" class="category-item">
+                            <div class="category-name">🏆 Оскар</div>
+                            <div class="category-count">Американская киноакадемия</div>
+                        </a>
+                        <a href="#" class="category-item">
+                            <div class="category-name">🌍 Золотой глобус</div>
+                            <div class="category-count">Ассоциация иностранной прессы</div>
+                        </a>
+                        <a href="#" class="category-item">
+                            <div class="category-name"> BAFTA</div>
+                            <div class="category-count">Британская академия</div>
+                        </a>
+                        <a href="#" class="category-item">
+                            <div class="category-name">🎬 Канны</div>
+                            <div class="category-count">Золотая пальмовая ветвь</div>
+                        </a>
+                        <a href="#" class="category-item">
+                            <div class="category-name">🦁 Венеция</div>
+                            <div class="category-count">Золотой лев</div>
+                        </a>
+                        <a href="#" class="category-item">
+                            <div class="category-name">🐻 Берлин</div>
+                            <div class="category-count">Золотой медведь</div>
+                        </a>
+                        <a href="#" class="category-item">
+                            <div class="category-name"> Сезар</div>
+                            <div class="category-count">Французская академия</div>
+                        </a>
+                        <a href="#" class="category-item">
+                            <div class="category-name"> Гойя</div>
+                            <div class="category-count">Испанская академия</div>
+                        </a>
+                    </div>
+
+                    <!-- Победители Оскара -->
+                    <div class="page-header">
+                        <h2 class="page-title">🎬 Победители премии "Оскар"</h2>
+                        <p class="page-subtitle">Лучшие фильмы года по версии Американской киноакадемии</p>
+                    </div>
+
+                    <table class="ranking-table">
+                        <thead>
+                            <tr>
+                                <th>Год</th>
+                                <th>Фильм</th>
+                                <th>Режиссер</th>
+                                <th>Номинаций</th>
+                                <th>Побед</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="ranking-position">2023</td>
+                                <td><strong>Оппенгеймер</strong></td>
+                                <td>Кристофер Нолан</td>
+                                <td>13</td>
+                                <td><span class="ranking-rating">7</span></td>
+                            </tr>
+                            <tr>
+                                <td class="ranking-position">2022</td>
+                                <td><strong>Всё везде и сразу</strong></td>
+                                <td>Дэниелы</td>
+                                <td>11</td>
+                                <td><span class="ranking-rating">7</span></td>
+                            </tr>
+                            <tr>
+                                <td class="ranking-position">2021</td>
+                                <td><strong>CODA</strong></td>
+                                <td>Шьян Хедер</td>
+                                <td>3</td>
+                                <td><span class="ranking-rating">3</span></td>
+                            </tr>
+                            <tr>
+                                <td class="ranking-position">2020</td>
+                                <td><strong>Земля кочевников</strong></td>
+                                <td>Хлоя Чжао</td>
+                                <td>6</td>
+                                <td><span class="ranking-rating">3</span></td>
+                            </tr>
+                            <tr>
+                                <td class="ranking-position">2019</td>
+                                <td><strong>Паразиты</strong></td>
+                                <td>Пон Чжун Хо</td>
+                                <td>6</td>
+                                <td><span class="ranking-rating">4</span></td>
+                            </tr>
+                            <tr>
+                                <td class="ranking-position">2018</td>
+                                <td><strong>Зеленая книга</strong></td>
+                                <td>Питер Фаррелли</td>
+                                <td>5</td>
+                                <td><span class="ranking-rating">3</span></td>
+                            </tr>
+                            <tr>
+                                <td class="ranking-position">2017</td>
+                                <td><strong>Форма воды</strong></td>
+                                <td>Гильермо дель Торо</td>
+                                <td>13</td>
+                                <td><span class="ranking-rating">4</span></td>
+                            </tr>
+                            <tr>
+                                <td class="ranking-position">2016</td>
+                                <td><strong>Лунный свет</strong></td>
+                                <td>Барри Дженкинс</td>
+                                <td>8</td>
+                                <td><span class="ranking-rating">3</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- Лучшие фильмы с наградами -->
+                    <div class="page-header">
+                        <h2 class="page-title">⭐ Фильмы-обладатели множества наград</h2>
+                        <p class="page-subtitle">Картины, получившие признание на различных кинофестивалях</p>
+                    </div>
+
+                    <div class="content-grid">
+                        <div class="menu-card">
+                            <div class="menu-card-image">
+                                <img src="images/open.png" alt="Оппенгеймер">
+                                <div class="menu-card-rating">7 Оскаров</div>
+                                <div class="menu-card-badge">🏆 ОСКАР</div>
+                            </div>
+                            <div class="menu-card-content">
+                                <h3 class="menu-card-title">Оппенгеймер</h3>
+                                <p class="menu-card-director">Кристофер Нолан</p>
+                                <div class="menu-card-info">
+                                    <span class="menu-card-year">2023</span>
+                                    <span class="menu-card-genre">Биография</span>
+                                </div>
+                                <p class="menu-card-description">Обладатель 7 премий "Оскар", включая лучший фильм, режиссуру и мужскую роль.</p>
+                                <div class="menu-card-actions">
+                                    <a href="#" class="menu-card-link">Награды</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-card">
+                            <div class="menu-card-image">
+                                <img src="images/all.jpg" alt="Всё везде и сразу">
+                                <div class="menu-card-rating">7 Оскаров</div>
+                                <div class="menu-card-badge">🏆 ОСКАР</div>
+                            </div>
+                            <div class="menu-card-content">
+                                <h3 class="menu-card-title">Всё везде и сразу</h3>
+                                <p class="menu-card-director">Дэниелы</p>
+                                <div class="menu-card-info">
+                                    <span class="menu-card-year">2022</span>
+                                    <span class="menu-card-genre">Фантастика</span>
+                                </div>
+                                <p class="menu-card-description">Рекордсмен по количеству "Оскаров" для фильма в жанре фантастики.</p>
+                                <div class="menu-card-actions">
+                                    <a href="#" class="menu-card-link">Награды</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-card">
+                            <div class="menu-card-image">
+                                <img src="images/paraz.jpg" alt="Паразиты">
+                                <div class="menu-card-rating">4 Оскара</div>
+                                <div class="menu-card-badge">🏆 ОСКАР</div>
+                            </div>
+                            <div class="menu-card-content">
+                                <h3 class="menu-card-title">Паразиты</h3>
+                                <p class="menu-card-director">Пон Чжун Хо</p>
+                                <div class="menu-card-info">
+                                    <span class="menu-card-year">2020</span>
+                                    <span class="menu-card-genre">Триллер</span>
+                                </div>
+                                <p class="menu-card-description">Первый неанглоязычный фильм, получивший "Оскар" за лучший фильм.</p>
+                                <div class="menu-card-actions">
+                                    <a href="#" class="menu-card-link">Награды</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-card">
+                            <div class="menu-card-image">
+                                <img src="images/titanik.jpg" alt="Титаник">
+                                <div class="menu-card-rating">11 Оскаров</div>
+                                <div class="menu-card-badge">🏆 ОСКАР</div>
+                            </div>
+                            <div class="menu-card-content">
+                                <h3 class="menu-card-title">Титаник</h3>
+                                <p class="menu-card-director">Джеймс Кэмерон</p>
+                                <div class="menu-card-info">
+                                    <span class="menu-card-year">1997</span>
+                                    <span class="menu-card-genre">Драма</span>
+                                </div>
+                                <p class="menu-card-description">Рекордсмен по количеству "Оскаров" (11), разделенный с "Властелином колец".</p>
+                                <div class="menu-card-actions">
+                                    <a href="#" class="menu-card-link">Награды</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-card">
+                            <div class="menu-card-image">
+                                <img src="images/lord.jpg" alt="Властелин колец">
+                                <div class="menu-card-rating">11 Оскаров</div>
+                                <div class="menu-card-badge">🏆 ОСКАР</div>
+                            </div>
+                            <div class="menu-card-content">
+                                <h3 class="menu-card-title">Властелин колец: Возвращение короля</h3>
+                                <p class="menu-card-director">Питер Джексон</p>
+                                <div class="menu-card-info">
+                                    <span class="menu-card-year">2003</span>
+                                    <span class="menu-card-genre">Фэнтези</span>
+                                </div>
+                                <p class="menu-card-description">Рекордсмен по количеству "Оскаров" (11) в одной церемонии.</p>
+                                <div class="menu-card-actions">
+                                    <a href="#" class="menu-card-link">Награды</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-card">
+                            <div class="menu-card-image">
+                                <img src="images/father.jpg" alt="Крестный отец">
+                                <div class="menu-card-rating">3 Оскара</div>
+                                <div class="menu-card-badge">🏆 ОСКАР</div>
+                            </div>
+                            <div class="menu-card-content">
+                                <h3 class="menu-card-title">Крестный отец</h3>
+                                <p class="menu-card-director">Фрэнсис Форд Коппола</p>
+                                <div class="menu-card-info">
+                                    <span class="menu-card-year">1972</span>
+                                    <span class="menu-card-genre">Криминал</span>
+                                </div>
+                                <p class="menu-card-description">Классика мирового кинематографа, обладатель 3 премий "Оскар".</p>
+                                <div class="menu-card-actions">
+                                    <a href="#" class="menu-card-link">Награды</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            
+        </div>
+        
+        <footer class="footer">
+            <p><i>«Кино должно заставить зрителя забыть о том, что он сидит в кино».</i> - © 2025 Dimasyyya. Сделано с надеждой на 5 по курсовой ❤️</p>
+        </footer>
+    </div>
+
+    <button class="back-to-top" id="backToTop">↑</button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
