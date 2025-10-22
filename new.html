@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новинки - DimasyyyaFilms</title>
+    <link rel="stylesheet" href="CSS/global.css">
+    <link rel="stylesheet" href="CSS/menu-styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Космические элементы фона -->
+        <div class="rocket-bg rocket-bg-1">🚀</div>
+        <div class="rocket-bg rocket-bg-2">🚀</div>
+        <div class="rocket-bg rocket-bg-3">🚀</div>
+        <div class="rocket-bg rocket-bg-4">🚀</div>
+        <div class="planet planet-1"></div>
+        <div class="planet planet-2"></div>
+
+        <header class="header">
+            <div class="header-images">
+                <div class="header-image"><img src="images/popcorn.jpeg" alt="Попкорн"></div>
+                <div class="header-image"><img src="images/film.jpeg" alt="табличка"></div>
+                <div class="header-image"><img src="images/camera.png" alt="камера"></div>
+                <div class="header-image"><img src="images/kreslo.jpeg" alt="Кресло"></div>
+            </div>
+            
+            <div class="header-top">
+                <h1 class="dimasyyya-title">DimasyyyaFilms</h1>
+                <div class="header-controls">
+                    <button class="theme-toggle-btn" id="themeToggle">
+                        <span class="theme-icon">🌙</span>
+                        <span class="theme-text">Тёмная</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        
+        <nav class="horizontal-menu">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="movies.html">Фильмы</a></li>
+                <li><a href="series.html">Сериалы</a></li>
+                <li><a href="directors.html">Режиссеры</a></li>
+                <li><a href="actors.html">Актеры</a></li>
+                <li><a href="articles.html">Статьи</a></li>
+                <li><a href="about.html">О нас</a></li>
+            </ul>
+        </nav>
+        
+        <div class="main-content">
+            <!-- Левая колонка -->
+            <aside class="left-column">
+                <div class="vertical-menu">
+                    <h3>Меню</h3>
+                    <ul>
+                        <li><a href="new.html" class="active">Новинки</a></li>
+                        <li><a href="top.html">Топ-10</a></li>
+                        <li><a href="genres.html">По жанрам</a></li>
+                        <li><a href="years.html">По годам</a></li>
+                        <li><a href="countries.html">По странам</a></li>
+                        <li><a href="awards.html">Награды</a></li>
+                    </ul>
+                </div>
+                
+                <div class="login-form">
+                    <h3>Вход на сайт</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="login">Логин:</label>
+                            <input type="text" id="login" name="login">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Пароль:</label>
+                            <input type="password" id="password" name="password">
+                        </div>
+                        <button type="submit" class="login-btn">Войти</button>
+                    </form>
+                </div>
+            </aside>
+            
+            <!-- Центральная колонка -->
+            <main class="center-column">
+                <div class="menu-page">
+                    <div class="page-header">
+                        <h1 class="page-title">🎬 Новинки кино</h1>
+                        <p class="page-subtitle">Самые свежие фильмы и сериалы, которые только вышли в прокат</p>
+                    </div>
+
+                    <!-- Фильтры -->
+                    <div class="filters-section">
+                        <div class="filter-group">
+                            <label class="filter-label">Тип контента:</label>
+                            <select class="filter-select">
+                                <option value="all">Все</option>
+                                <option value="movies">Фильмы</option>
+                                <option value="series">Сериалы</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label class="filter-label">Период:</label>
+                            <select class="filter-select">
+                                <option value="week">За неделю</option>
+                                <option value="month">За месяц</option>
+                                <option value="year">За год</option>
+                            </select>
+                        </div>
+                        <div class="filter-actions">
+                            <button class="filter-btn apply">Применить фильтры</button>
+                            <button class="filter-btn">Сбросить</button>
+                        </div>
+                    </div>
+
+                    <!-- Сетка новинок -->
+                    <div class="content-grid">
+                        <div class="menu-card">
+                            <div class="menu-card-image">
+                                <img src="images/duna.png" alt="Дюна: Часть вторая">
+                                <div class="menu-card-rating">8.2 ⭐</div>
+                                <div class="menu-card-badge">НОВИНКА</div>
+                            </div>
+                            <div class="menu-card-content">
+                                <h3 class="menu-card-title">Дюна: Часть вторая</h3>
+                                <p class="menu-card-director">Дени Вильнёв</p>
+                                <div class="menu-card-info">
+                                    <span class="menu-card-year">2024</span>
+                                    <span class="menu-card-genre">Фантастика</span>
+                                    <span class="menu-card-country">США</span>
+                                </div>
+                                <p class="menu-card-description">Продолжение эпической саги о Пол Атрейдесе и его путешествии по пустынной планете Арракис.</p>
+                                <div class="menu-card-actions">
+            <a href="https://www.kinopoisk.ru/film/4540126/" class="menu-card-link kinopoisk" target="_blank">Подробнее</a>
+            <a href="https://www.youtube.com/watch?v=42RV2e1GyzM" class="menu-card-link youtube" target="_blank">Трейлер</a>
+        </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-card">
+                            <div class="menu-card-image">
+                                <img src="images/open.png" alt="Оппенгеймер">
+                                <div class="menu-card-rating">8.1 ⭐</div>
+                                <div class="menu-card-badge">НОВИНКА</div>
+                            </div>
+                            <div class="menu-card-content">
+                                <h3 class="menu-card-title">Оппенгеймер</h3>
+                                <p class="menu-card-director">Кристофер Нолан</p>
+                                <div class="menu-card-info">
+                                    <span class="menu-card-year">2023</span>
+                                    <span class="menu-card-genre">Биография</span>
+                                    <span class="menu-card-country">США</span>
+                                </div>
+                                <p class="menu-card-description">История создания атомной бомбы и моральные дилеммы ее создателя Роберта Оппенгеймера.</p>
+                                <div class="menu-card-actions">
+                                    <div class="menu-card-actions">
+            <a href="https://www.kinopoisk.ru/film/4664634/" class="menu-card-link kinopoisk" target="_blank">Подробнее</a>
+            <a href="https://www.youtube.com/watch?v=uYPbbksJxIg" class="menu-card-link youtube" target="_blank">Трейлер</a>
+        </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-card">
+                            <div class="menu-card-image">
+                                <img src="images/barbie.jpg" alt="Барби">
+                                <div class="menu-card-rating">6.6 ⭐</div>
+                                <div class="menu-card-badge">НОВИНКА</div>
+                            </div>
+                            <div class="menu-card-content">
+                                <h3 class="menu-card-title">Барби</h3>
+                                <p class="menu-card-director">Грета Гервиг</p>
+                                <div class="menu-card-info">
+                                    <span class="menu-card-year">2023</span>
+                                    <span class="menu-card-genre">Комедия</span>
+                                    <span class="menu-card-country">США</span>
+                                </div>
+                                <p class="menu-card-description">Барби и Кен открывают для себя радости и трудности жизни среди людей в реальном мире.</p>
+                                <div class="menu-card-actions">
+            <a href="https://www.kinopoisk.ru/film/478052/" class="menu-card-link kinopoisk" target="_blank">Подробнее</a>
+            <a href="https://www.youtube.com/watch?v=pBk4NYhWNMM" class="menu-card-link youtube" target="_blank">Трейлер</a>
+        </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-card">
+                            <div class="menu-card-image">
+                                <img src="images/mission.jpg" alt="Миссия невыполнима 7">
+                                <div class="menu-card-rating">7.2 ⭐</div>
+                                <div class="menu-card-badge">НОВИНКА</div>
+                            </div>
+                            <div class="menu-card-content">
+                                <h3 class="menu-card-title">Миссия невыполнима 7</h3>
+                                <p class="menu-card-director">Кристофер Маккуорри</p>
+                                <div class="menu-card-info">
+                                    <span class="menu-card-year">2023</span>
+                                    <span class="menu-card-genre">Боевик</span>
+                                    <span class="menu-card-country">США</span>
+                                </div>
+                                <p class="menu-card-description">Итан Хант и его команда сталкиваются с самой опасной миссией против загадочного врага.</p>
+                                <div class="menu-card-actions">
+            <a href="https://www.kinopoisk.ru/film/1229684/" class="menu-card-link kinopoisk" target="_blank">Подробнее</a>
+            <a href="https://www.youtube.com/watch?v=kRXM8qlRh5g" class="menu-card-link youtube" target="_blank">Трейлер</a>
+        </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-card">
+                            <div class="menu-card-image">
+                                <img src="images/straz.jpg" alt="Стражи Галактики 3">
+                                <div class="menu-card-rating">8.1 ⭐</div>
+                                <div class="menu-card-badge">НОВИНКА</div>
+                            </div>
+                            <div class="menu-card-content">
+                                <h3 class="menu-card-title">Стражи Галактики 3</h3>
+                                <p class="menu-card-director">Джеймс Ганн</p>
+                                <div class="menu-card-info">
+                                    <span class="menu-card-year">2023</span>
+                                    <span class="menu-card-genre">Фантастика</span>
+                                    <span class="menu-card-country">США</span>
+                                </div>
+                                <p class="menu-card-description">Последнее приключение Стражей Галактики, где они сталкиваются с прошлым Ракеты.</p>
+                                <a href="https://www.kinopoisk.ru/film/1044280/" class="menu-card-link kinopoisk" target="_blank">Подробнее</a>
+            <a href="https://www.youtube.com/watch?v=JcEKRP7h5G8" class="menu-card-link youtube" target="_blank">Трейлер</a>
+        </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-card">
+                            <div class="menu-card-image">
+                                <img src="images/wick.jpg" alt="Джон Уик 4">
+                                <div class="menu-card-rating">7.6 ⭐</div>
+                                <div class="menu-card-badge">НОВИНКА</div>
+                            </div>
+                            <div class="menu-card-content">
+                                <h3 class="menu-card-title">Джон Уик 4</h3>
+                                <p class="menu-card-director">Чад Стахелски</p>
+                                <div class="menu-card-info">
+                                    <span class="menu-card-year">2023</span>
+                                    <span class="menu-card-genre">Боевик</span>
+                                    <span class="menu-card-country">США</span>
+                                </div>
+                                <p class="menu-card-description">Джон Уик открывает путь к победе над Высоким советом, но должен столкнуться с новым врагом.</p>
+                                <a href="https://www.kinopoisk.ru/film/1267348/" class="menu-card-link kinopoisk" target="_blank">Подробнее</a>
+            <a href="https://www.youtube.com/watch?v=04dwrLbAaTE" class="menu-card-link youtube" target="_blank">Трейлер</a>
+        </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pagination">
+                        <button class="pagination-btn active">1</button>
+                        <button class="pagination-btn">2</button>
+                        <button class="pagination-btn">3</button>
+                        <button class="pagination-btn">Следующая</button>
+                    </div>
+                </div>
+            </main>
+        
+        </div>
+        
+        <footer class="footer">
+            <p><i>«Кино должно заставить зрителя забыть о том, что он сидит в кино».</i> - © 2025 Dimasyyya. Сделано с надеждой на 5 по курсовой ❤️</p>
+        </footer>
+    </div>
+
+    <button class="back-to-top" id="backToTop">↑</button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

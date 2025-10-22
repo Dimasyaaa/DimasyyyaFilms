@@ -16,8 +16,9 @@ function initMovieQuiz() {
     const quizButton = document.getElementById('headerQuizBtn');
     if (quizButton) {
         quizButton.addEventListener('click', startQuiz);
+        console.log(' Викторина инициализирована');
     } else {
-        console.error('❌ Кнопка викторины не найдена!');
+        console.error(' Кнопка викторины не найдена!');
     }
 }
 
@@ -92,7 +93,7 @@ function initQuizQuestions() {
 function startQuiz() {
     // Проверяем инициализацию вопросов
     if (!currentQuiz.isInitialized || currentQuiz.questions.length === 0) {
-        console.error('❌ Вопросы викторины не инициализированы!');
+        console.error(' Вопросы викторины не инициализированы!');
         initQuizQuestions();
     }
     
@@ -159,13 +160,23 @@ function createQuizContainer() {
     quizSection.className = 'quiz-section';
     quizSection.innerHTML = quizHTML;
     
-    document.getElementById('content').appendChild(quizSection);
+    // Ищем, куда вставить викторину - исправленная логика
+    const content = document.getElementById('content') || 
+                   document.querySelector('.center-column') || 
+                   document.querySelector('.main-content') ||
+                   document.body;
+    
+    if (content) {
+        content.appendChild(quizSection);
+    } else {
+        console.error(' Не найден контейнер для викторины');
+        document.body.appendChild(quizSection);
+    }
 }
 
 function showQuestion() {
-    // Проверяем, есть ли вопросы
     if (!currentQuiz.questions || currentQuiz.questions.length === 0) {
-        console.error('❌ Нет вопросов для показа!');
+        console.error(' Нет вопросов для показа!');
         return;
     }
     
@@ -174,7 +185,7 @@ function showQuestion() {
     const optionsContainer = document.getElementById('optionsContainer');
     
     if (!questionText || !optionsContainer) {
-        console.error('❌ Элементы викторины не найдены!');
+        console.error('Элементы викторины не найдены!');
         return;
     }
     
@@ -302,20 +313,6 @@ function showQuizNotification(message, type = 'info') {
         <button onclick="this.parentElement.remove()">×</button>
     `;
     
-    notification.style.cssText = `
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        background: var(--card-bg);
-        color: var(--text-primary);
-        padding: 15px 20px;
-        border-radius: 10px;
-        border-left: 4px solid ${type === 'success' ? '#4CAF50' : type === 'error' ? '#F44336' : 'var(--text-accent)'};
-        box-shadow: 0 5px 20px var(--shadow-color);
-        z-index: 1000;
-        animation: quizSlideInRight 0.3s ease;
-    `;
-    
     document.body.appendChild(notification);
     
     setTimeout(() => {
@@ -327,6 +324,7 @@ function showQuizNotification(message, type = 'info') {
 
 // ========== АВТОМАТИЧЕСКАЯ ИНИЦИАЛИЗАЦИЯ ==========
 document.addEventListener('DOMContentLoaded', function() {
+    console.log(' Инициализация викторины...');
     initMovieQuiz();
 });
 

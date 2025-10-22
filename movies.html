@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DimasyyyaFilms - Фильмы</title>
     <link rel="stylesheet" href="CSS/global.css">
+    <link rel="stylesheet" href="CSS/carousels.css">
     <link rel="stylesheet" href="CSS/quiz.css">
     <link rel="stylesheet" href="CSS/search.css">
 </head>
@@ -43,11 +44,15 @@
             </ul>
         </nav>
     </header>
-        <!-- Популярные фильмы -->
-        <section class="cards-section">
-            <h3 class="section-title">⭐ Популярные фильмы</h3>
-            <div class="cards-grid" id="moviesGrid">
-                <!-- Карточки фильмов -->
+
+    <!-- Карусель с фильмами -->
+    <section class="carousel-section">
+        <div class="section-header">
+            <h3 class="section-title">🎬 Популярные фильмы</h3>
+        </div>
+        <div class="carousel-container">
+            <button class="carousel-btn carousel-prev">‹</button>
+            <div class="cards-carousel" id="moviesCarousel">
                 <div class="movie-card" data-title="побег из шоушенка" data-year="1994" data-genre="драма" data-rating="9.1">
                     <div class="card-image">
                         <img src="images/pobeg.png" alt="Побег из Шоушенка">
@@ -62,9 +67,9 @@
                             <span class="card-genre">Драма</span>
                             <span class="card-duration">142 мин</span>
                         </div>
-                        <p class="card-description">Банкир Энди Дюфрейн обвинён в убийстве собственной жены и её любовника. Оказавшись в тюрьме под названием Шоушенк, он сталкивается с жестокостью и беззаконием, царящими по обе стороны решётки.</p>
+                        <p class="card-description">Банкир Энди Дюфрейн обвинён в убийстве собственной жены и её любовника.</p>
                         <div class="card-actions">
-                            <a href="https://www.kinopoisk.ru/film/326/" class="card-link" target="_blank">Подробнее</a>
+                            <a href="https://www.kinopoisk.ru/film/326/" class="card-link kinopoisk" target="_blank">Подробнее</a>
                             <button class="card-trailer-btn" data-trailer="https://www.youtube.com/embed/d03SayeEuxs">Трейлер</button>
                         </div>
                     </div>
@@ -84,15 +89,15 @@
                             <span class="card-genre">Драма, Фэнтези</span>
                             <span class="card-duration">189 мин</span>
                         </div>
-                        <p class="card-description">Пол Эджкомб — начальник блока смертников в тюрьме «Холодная гора», каждый из узников которого однажды проходит «зеленую милю» по пути к месту казни. Пол повидал много заключённых, но никогда не встречал такого, как Джон Коффи.</p>
+                        <p class="card-description">Пол Эджкомб — начальник блока смертников в тюрьме «Холодная гора».</p>
                         <div class="card-actions">
-                            <a href="https://www.kinopoisk.ru/film/435/" class="card-link" target="_blank">Подробнее</a>
+                            <a href="https://www.kinopoisk.ru/film/435/" class="card-link kinopoisk" target="_blank">Подробнее</a>
                             <button class="card-trailer-btn" data-trailer="https://www.youtube.com/embed/Ki4haFrqSrw">Трейлер</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="movie-card" data-title="темный рыцарь" data-year="2008" data-genre="боевик криминал драма" data-rating="8.5">
+                <div class="movie-card" data-title="темный рыцарь" data-year="2008" data-genre="боевик драма" data-rating="8.5">
                     <div class="card-image">
                         <img src="images/batman.png" alt="Темный рыцарь">
                         <div class="card-rating">8.5 ⭐</div>
@@ -103,32 +108,122 @@
                         <p class="card-director">Кристофер Нолан</p>
                         <div class="card-info">
                             <span class="card-year">2008</span>
-                            <span class="card-genre">Боевик, Криминал, Драма</span>
+                            <span class="card-genre">Боевик, Драма</span>
                             <span class="card-duration">152 мин</span>
                         </div>
-                        <p class="card-description">Бэтмен поднимает ставки в войне с криминалом. С помощью лейтенанта Джима Гордона и прокурора Харви Дента он намерен очистить улицы от преступности, отравляющей город.</p>
+                        <p class="card-description">Бэтмен поднимает ставки в войне с криминалом.</p>
                         <div class="card-actions">
-                            <a href="https://www.kinopoisk.ru/film/111543/" class="card-link" target="_blank">Подробнее</a>
+                            <a href="https://www.kinopoisk.ru/film/111543/" class="card-link kinopoisk" target="_blank">Подробнее</a>
                             <button class="card-trailer-btn" data-trailer="https://www.youtube.com/embed/UMgb3hQCb08">Трейлер</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Добавьте больше фильмов по аналогии -->
-            </div>
-        </section>
-
-        <!-- Модальное окно для трейлера -->
-        <div id="trailerModal" class="modal" style="display: none;">
-            <div class="modal-content">
-                <button class="modal-close" id="trailerModalClose">✕</button>
-                <div class="modal-body">
-                    <iframe id="trailerVideo" width="800" height="450" frameborder="0" allowfullscreen></iframe>
+                <!-- Карточка 4 - Форрест Гамп -->
+                <div class="movie-card" data-title="форрест гамп" data-year="1994" data-genre="драма комедия" data-rating="8.9">
+                    <div class="card-image">
+                        <img src="images/forest.png" alt="Форрест Гамп">
+                        <div class="card-rating">8.9 ⭐</div>
+                        <button class="card-like-btn">🤍</button>
+                    </div>
+                    <div class="card-content">
+                        <h4 class="card-title">Форрест Гамп</h4>
+                        <p class="card-director">Роберт Земекис</p>
+                        <div class="card-info">
+                            <span class="card-year">1994</span>
+                            <span class="card-genre">Драма, Комедия</span>
+                            <span class="card-duration">142 мин</span>
+                        </div>
+                        <p class="card-description">От лица главного героя Форреста Гампа рассказывается история его необыкновенной жизни.</p>
+                        <div class="card-actions">
+                            <a href="https://www.kinopoisk.ru/film/444/" class="card-link kinopoisk" target="_blank">Подробнее</a>
+                            <button class="card-trailer-btn" data-trailer="https://www.youtube.com/embed/bLvqoHBptjg">Трейлер</button>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Карточка 5 - Начало -->
+                <div class="movie-card" data-title="начало" data-year="2010" data-genre="фантастика триллер" data-rating="8.7">
+                    <div class="card-image">
+                        <img src="images/start.png" alt="Начало">
+                        <div class="card-rating">8.7 ⭐</div>
+                        <button class="card-like-btn">🤍</button>
+                    </div>
+                    <div class="card-content">
+                        <h4 class="card-title">Начало</h4>
+                        <p class="card-director">Кристофер Нолан</p>
+                        <div class="card-info">
+                            <span class="card-year">2010</span>
+                            <span class="card-genre">Фантастика, Триллер</span>
+                            <span class="card-duration">148 мин</span>
+                        </div>
+                        <p class="card-description">Кобб — талантливый вор, лучший из лучших в опасном искусстве извлечения.</p>
+                        <div class="card-actions">
+                            <a href="https://www.kinopoisk.ru/film/447301/" class="card-link kinopoisk" target="_blank">Подробнее</a>
+                            <button class="card-trailer-btn" data-trailer="https://www.youtube.com/embed/YoHD9XEInc0">Трейлер</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="movie-card" data-title="интерстеллар" data-year="2014" data-genre="фантастика драма" data-rating="8.6">
+                    <div class="card-image">
+                        <img src="images/cosmos.png" alt="Интерстеллар">
+                        <div class="card-rating">8.6 ⭐</div>
+                        <button class="card-like-btn">🤍</button>
+                    </div>
+                    <div class="card-content">
+                        <h4 class="card-title">Интерстеллар</h4>
+                        <p class="card-director">Кристофер Нолан</p>
+                        <div class="card-info">
+                            <span class="card-year">2014</span>
+                            <span class="card-genre">Фантастика, Драма</span>
+                            <span class="card-duration">169 мин</span>
+                        </div>
+                        <p class="card-description">Когда засуха приводит человечество к продовольственному кризису, коллектив исследователей отправляется в путешествие.</p>
+                        <div class="card-actions">
+                            <a href="https://www.kinopoisk.ru/film/258687/" class="card-link kinopoisk" target="_blank">Подробнее</a>
+                            <button class="card-trailer-btn" data-trailer="https://www.youtube.com/embed/zSWdZVtXT7E">Трейлер</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="movie-card" data-title="криминальное чтиво" data-year="1994" data-genre="криминал драма" data-rating="8.6">
+                    <div class="card-image">
+                        <img src="images/crimal.jpg" alt="Криминальное чтиво">
+                        <div class="card-rating">8.6 ⭐</div>
+                        <button class="card-like-btn">🤍</button>
+                    </div>
+                    <div class="card-content">
+                        <h4 class="card-title">Криминальное чтиво</h4>
+                        <p class="card-director">Квентин Тарантино</p>
+                        <div class="card-info">
+                            <span class="card-year">1994</span>
+                            <span class="card-genre">Криминал, Драма</span>
+                            <span class="card-duration">154 мин</span>
+                        </div>
+                        <p class="card-description">Двое бандитов Винсент Вега и Джулс Винфилд ведут философские беседы между разборками.</p>
+                        <div class="card-actions">
+                            <a href="https://www.kinopoisk.ru/film/342/" class="card-link kinopoisk" target="_blank">Подробнее</a>
+                            <button class="card-trailer-btn" data-trailer="https://www.youtube.com/embed/s7EdQ4FqbhY">Трейлер</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <button class="carousel-btn carousel-next">›</button>
+        </div>
+    </section>
+
+    <!-- Модальное окно для трейлера -->
+    <div id="trailerModal" class="modal" style="display: none;">
+        <div class="modal-content trailer-modal">
+            <button class="modal-close" id="trailerModalClose">✕</button>
+            <div class="modal-body">
+                <iframe id="trailerVideo" width="560" height="315" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
     </div>
-    
+
     <footer>
         <p>&copy; 2025 Dimasyyya. Сделано с надеждой на 5 по курсовой❤️</p>
     </footer>

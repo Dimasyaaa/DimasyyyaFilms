@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>По странам - DimasyyyaFilms</title>
+    <link rel="stylesheet" href="CSS/global.css">
+    <link rel="stylesheet" href="CSS/menu-styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Космические элементы фона -->
+        <div class="rocket-bg rocket-bg-1">🚀</div>
+        <div class="rocket-bg rocket-bg-2">🚀</div>
+        <div class="rocket-bg rocket-bg-3">🚀</div>
+        <div class="rocket-bg rocket-bg-4">🚀</div>
+        <div class="planet planet-1"></div>
+        <div class="planet planet-2"></div>
+
+        <header class="header">
+            <div class="header-images">
+                <div class="header-image"><img src="images/popcorn.jpeg" alt="Попкорн"></div>
+                <div class="header-image"><img src="images/film.jpeg" alt="табличка"></div>
+                <div class="header-image"><img src="images/camera.png" alt="камера"></div>
+                <div class="header-image"><img src="images/kreslo.jpeg" alt="Кресло"></div>
+            </div>
+            
+            <div class="header-top">
+                <h1 class="dimasyyya-title">DimasyyyaFilms</h1>
+                <div class="header-controls">
+                    <button class="theme-toggle-btn" id="themeToggle">
+                        <span class="theme-icon">🌙</span>
+                        <span class="theme-text">Тёмная</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        
+        <nav class="horizontal-menu">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="movies.html">Фильмы</a></li>
+                <li><a href="series.html">Сериалы</a></li>
+                <li><a href="directors.html">Режиссеры</a></li>
+                <li><a href="actors.html">Актеры</a></li>
+                <li><a href="articles.html">Статьи</a></li>
+                <li><a href="about.html">О нас</a></li>
+            </ul>
+        </nav>
+        
+        <div class="main-content">
+            <!-- Левая колонка -->
+            <aside class="left-column">
+                <div class="vertical-menu">
+                    <h3>Меню</h3>
+                    <ul>
+                        <li><a href="new.html">Новинки</a></li>
+                        <li><a href="top.html">Топ-10</a></li>
+                        <li><a href="genres.html">По жанрам</a></li>
+                        <li><a href="years.html">По годам</a></li>
+                        <li><a href="countries.html" class="active">По странам</a></li>
+                        <li><a href="awards.html">Награды</a></li>
+                    </ul>
+                </div>
+                
+                <div class="login-form">
+                    <h3>Вход на сайт</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="login">Логин:</label>
+                            <input type="text" id="login" name="login">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Пароль:</label>
+                            <input type="password" id="password" name="password">
+                        </div>
+                        <button type="submit" class="login-btn">Войти</button>
+                    </form>
+                </div>
+            </aside>
+            
+            <!-- Центральная колонка -->
+            <main class="center-column">
+                <div class="menu-page">
+                    <div class="page-header">
+                        <h1 class="page-title">🌍 Фильмы по странам</h1>
+                        <p class="page-subtitle">Откройте для себя кинематограф разных стран мира</p>
+                    </div>
+
+                    <!-- Фильтры по странам -->
+                    <div class="filters-section">
+                        <div class="filter-group">
+                            <label class="filter-label">Выберите страну:</label>
+                            <select class="filter-select">
+                                <option value="">Все страны</option>
+                                <option value="usa">США</option>
+                                <option value="uk">Великобритания</option>
+                                <option value="france">Франция</option>
+                                <option value="germany">Германия</option>
+                                <option value="italy">Италия</option>
+                                <option value="spain">Испания</option>
+                                <option value="russia">Россия</option>
+                                <option value="japan">Япония</option>
+                                <option value="korea">Южная Корея</option>
+                                <option value="india">Индия</option>
+                                <option value="china">Китай</option>
+                                <option value="australia">Австралия</option>
+                                <option value="canada">Канада</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label class="filter-label">Континент:</label>
+                            <select class="filter-select">
+                                <option value="">Все континенты</option>
+                                <option value="europe">Европа</option>
+                                <option value="asia">Азия</option>
+                                <option value="america">Северная Америка</option>
+                                <option value="latin">Латинская Америка</option>
+                                <option value="africa">Африка</option>
+                                <option value="oceania">Океания</option>
+                            </select>
+                        </div>
+                        <div class="filter-actions">
+                            <button class="filter-btn apply">Применить фильтры</button>
+                            <button class="filter-btn">Сбросить</button>
+                        </div>
+                    </div>
+
+                    <!-- Список стран -->
+                    <div class="categories-list">
+                        <a href="#" class="category-item">
+                            <div class="category-name">🇺🇸 США</div>
+                            <div class="category-count">8,456 фильмов</div>
+                        </a>
+                        <a href="#" class="category-item">
+                            <div class="category-name">🇬🇧 Великобритания</div>
+                            <div class="category-count">2,345 фильмов</div>
+                        </a>
+                        <a href="#" class="category-item">
+                            <div class="category-name">🇫🇷 Франция</div>
+                            <div class="category-count">1,987 фильмов</div>
+                        </a>
+                        <a href="#" class="category-item">
+                            <div class="category-name">🇩🇪 Германия</div>
+                            <div class="category-count">1,543 фильма</div>
+                        </a>
+                        <a href="#" class="category-item">
+                            <div class="category-name">🇮🇹 Италия</div>
+                            <div class="category-count">1,432 фильма</div>
+                        </a>
+                        <a href="#" class="category-item">
+                            <div class="category-name">🇪🇸 Испания</div>
+                            <div class="category-count">1,234 фильма</div>
+                        </a>
+                        <a href="#" class="category-item">
+                            <div class="category-name">🇷🇺 Россия</div>
+                            <div class="category-count">987 фильмов</div>
+                        </a>
+                        <a href="#" class="category-item">
+                            <div class="category-name">🇯🇵 Япония</div>
+                            <div class="category-count">1,765 фильмов</div>
+                        </a>
+                        <a href="#" class="category-item">
+                            <div class="category-name">🇰🇷 Южная Корея</div>
+                            <div class="category-count">876 фильмов</div>
+                        </a>
+                        <a href="#" class="category-item">
+                            <div class="category-name">🇮🇳 Индия</div>
+                            <div class="category-count">3,456 фильмов</div>
+                        </a>
+                        <a href="#" class="category-item">
+                            <div class="category-name">🇨🇳 Китай</div>
+                            <div class="category-count">1,234 фильма</div>
+                        </a>
+                        <a href="#" class="category-item">
+                            <div class="category-name">🇦🇺 Австралия</div>
+                            <div class="category-count">654 фильма</div>
+                        </a>
+                    </div>
+
+                    <!-- Лучшие фильмы по странам -->
+                    <div class="page-header">
+                        <h2 class="page-title">🎬 Шедевры мирового кинематографа</h2>
+                        <p class="page-subtitle">Лучшие фильмы из разных стран мира</p>
+                    </div>
+
+                    <div class="content-grid">
+                        <div class="menu-card">
+                            <div class="menu-card-image">
+                                <img src="images/father.jpg" alt="Крестный отец">
+                                <div class="menu-card-rating">8.7 ⭐</div>
+                                <div class="menu-card-badge">США</div>
+                            </div>
+                            <div class="menu-card-content">
+                                <h3 class="menu-card-title">Крестный отец</h3>
+                                <p class="menu-card-director">Фрэнсис Форд Коппола</p>
+                                <div class="menu-card-info">
+                                    <span class="menu-card-year">1972</span>
+                                    <span class="menu-card-genre">Криминал</span>
+                                </div>
+                                <p class="menu-card-description">Эпическая сага о сицилийской мафиозной семье Корлеоне в послевоенной Америке.</p>
+                                <div class="menu-card-actions">
+                                    <a href="https://www.kinopoisk.ru/film/325/" class="menu-card-link">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-card">
+                            <div class="menu-card-image">
+                                <img src="images/ameli.png" alt="Амели">
+                                <div class="menu-card-rating">8.0 ⭐</div>
+                                <div class="menu-card-badge"> Франция</div>
+                            </div>
+                            <div class="menu-card-content">
+                                <h3 class="menu-card-title">Амели</h3>
+                                <p class="menu-card-director">Жан-Пьер Жёне</p>
+                                <div class="menu-card-info">
+                                    <span class="menu-card-year">2001</span>
+                                    <span class="menu-card-genre">Комедия</span>
+                                </div>
+                                <p class="menu-card-description">Молодая парижанка решает изменить жизни окружающих ее людей к лучшему.</p>
+                                <div class="menu-card-actions">
+                                    <a href="https://www.kinopoisk.ru/film/341/" class="menu-card-link">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-card">
+                            <div class="menu-card-image">
+                                <img src="images/ghost.jpg" alt="Унесенные призраками">
+                                <div class="menu-card-rating">8.6 ⭐</div>
+                                <div class="menu-card-badge"> Япония</div>
+                            </div>
+                            <div class="menu-card-content">
+                                <h3 class="menu-card-title">Унесенные призраками</h3>
+                                <p class="menu-card-director">Хаяо Миядзаки</p>
+                                <div class="menu-card-info">
+                                    <span class="menu-card-year">2001</span>
+                                    <span class="menu-card-genre">Аниме</span>
+                                </div>
+                                <p class="menu-card-description">Десятилетняя Тихиро попадает в мир духов и должна спасти своих родителей.</p>
+                                <div class="menu-card-actions">
+                                    <a href="https://www.kinopoisk.ru/film/370/" class="menu-card-link">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-card">
+                            <div class="menu-card-image">
+                                <img src="images/paraz.jpg" alt="Паразиты">
+                                <div class="menu-card-rating">8.0 ⭐</div>
+                                <div class="menu-card-badge"> Корея</div>
+                            </div>
+                            <div class="menu-card-content">
+                                <h3 class="menu-card-title">Паразиты</h3>
+                                <p class="menu-card-director">Пон Чжун Хо</p>
+                                <div class="menu-card-info">
+                                    <span class="menu-card-year">2020</span>
+                                    <span class="menu-card-genre">Триллер</span>
+                                </div>
+                                <p class="menu-card-description">Бедная корейская семья внедряется в жизнь богатых, что приводит к неожиданным последствиям.</p>
+                                <div class="menu-card-actions">
+                                    <a href="https://www.kinopoisk.ru/film/1043758/" class="menu-card-link">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-card">
+                            <div class="menu-card-image">
+                                <img src="images/life.png" alt="Жизнь прекрасна">
+                                <div class="menu-card-rating">8.6 ⭐</div>
+                                <div class="menu-card-badge"> Италия</div>
+                            </div>
+                            <div class="menu-card-content">
+                                <h3 class="menu-card-title">Жизнь прекрасна</h3>
+                                <p class="menu-card-director">Роберто Бениньи</p>
+                                <div class="menu-card-info">
+                                    <span class="menu-card-year">1997</span>
+                                    <span class="menu-card-genre">Драма</span>
+                                </div>
+                                <p class="menu-card-description">Еврейский отец использует свое воображение, чтобы защитить сына в нацистском концлагере.</p>
+                                <div class="menu-card-actions">
+                                    <a href="https://www.kinopoisk.ru/film/381/" class="menu-card-link">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            
+        </div>
+        
+        <footer class="footer">
+            <p><i>«Кино должно заставить зрителя забыть о том, что он сидит в кино».</i> - © 2025 Dimasyyya. Сделано с надеждой на 5 по курсовой ❤️</p>
+        </footer>
+    </div>
+
+    <button class="back-to-top" id="backToTop">↑</button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
