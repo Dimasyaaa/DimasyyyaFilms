@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>По жанрам - DimasyyyaFilms</title>
+    <link rel="stylesheet" href="CSS/global.css">
+    <link rel="stylesheet" href="CSS/menu-styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Космические элементы фона -->
+        <div class="rocket-bg rocket-bg-1">🚀</div>
+        <div class="rocket-bg rocket-bg-2">🚀</div>
+        <div class="rocket-bg rocket-bg-3">🚀</div>
+        <div class="rocket-bg rocket-bg-4">🚀</div>
+        <div class="planet planet-1"></div>
+        <div class="planet planet-2"></div>
+
+        <header class="header">
+            <div class="header-images">
+                <div class="header-image"><img src="images/popcorn.jpeg" alt="Попкорн"></div>
+                <div class="header-image"><img src="images/film.jpeg" alt="табличка"></div>
+                <div class="header-image"><img src="images/camera.png" alt="камера"></div>
+                <div class="header-image"><img src="images/kreslo.jpeg" alt="Кресло"></div>
+            </div>
+            
+            <div class="header-top">
+                <h1 class="dimasyyya-title">DimasyyyaFilms</h1>
+                <div class="header-controls">
+                    <button class="theme-toggle-btn" id="themeToggle">
+                        <span class="theme-icon">🌙</span>
+                        <span class="theme-text">Тёмная</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        
+        <nav class="horizontal-menu">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="movies.html">Фильмы</a></li>
+                <li><a href="series.html">Сериалы</a></li>
+                <li><a href="directors.html">Режиссеры</a></li>
+                <li><a href="actors.html">Актеры</a></li>
+                <li><a href="articles.html">Статьи</a></li>
+                <li><a href="about.html">О нас</a></li>
+            </ul>
+        </nav>
+        
+        <div class="main-content">
+            <!-- Левая колонка -->
+            <aside class="left-column">
+                <div class="vertical-menu">
+                    <h3>Меню</h3>
+                    <ul>
+                        <li><a href="new.html">Новинки</a></li>
+                        <li><a href="top.html">Топ-10</a></li>
+                        <li><a href="genres.html" class="active">По жанрам</a></li>
+                        <li><a href="years.html">По годам</a></li>
+                        <li><a href="countries.html">По странам</a></li>
+                        <li><a href="awards.html">Награды</a></li>
+                    </ul>
+                </div>
+                
+                <div class="login-form">
+                    <h3>Вход на сайт</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="login">Логин:</label>
+                            <input type="text" id="login" name="login">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Пароль:</label>
+                            <input type="password" id="password" name="password">
+                        </div>
+                        <button type="submit" class="login-btn">Войти</button>
+                    </form>
+                </div>
+            </aside>
+            
+            <!-- Центральная колонка -->
+            <main class="center-column">
+                <div class="menu-page">
+                    <div class="page-header">
+                        <h1 class="page-title">🎭 Фильмы по жанрам</h1>
+                        <p class="page-subtitle">Откройте для себя фильмы и сериалы в ваших любимых жанрах</p>
+                    </div>
+
+                    <!-- Список жанров -->
+                    <div class="categories-list">
+                        <a href="#" class="category-item">
+                            <div class="category-name">🎬 Драма</div>
+                            <div class="category-count">1,245 фильмов</div>
+                        </a>
+                        <a href="#" class="category-item">
+                            <div class="category-name">😂 Комедия</div>
+                            <div class="category-count">987 фильмов</div>
+                        </a>
+                        <a href="#" class="category-item">
+                            <div class="category-name">🔫 Боевик</div>
+                            <div class="category-count">756 фильмов</div>
+                        </a>
+                        <a href="#" class="category-item">
+                            <div class="category-name">🚀 Фантастика</div>
+                            <div class="category-count">543 фильма</div>
+                        </a>
+                        <a href="#" class="category-item">
+                            <div class="category-name">👻 Ужасы</div>
+                            <div class="category-count">432 фильма</div>
+                        </a>
+                        <a href="#" class="category-item">
+                            <div class="category-name">💕 Мелодрама</div>
+                            <div class="category-count">398 фильмов</div>
+                        </a>
+                        <a href="#" class="category-item">
+                            <div class="category-name">🕵️ Триллер</div>
+                            <div class="category-count">654 фильма</div>
+                        </a>
+                        <a href="#" class="category-item">
+                            <div class="category-name">🏰 Фэнтези</div>
+                            <div class="category-count">321 фильм</div>
+                        </a>
+                        <a href="#" class="category-item">
+                            <div class="category-name">🔍 Детектив</div>
+                            <div class="category-count">287 фильмов</div>
+                        </a>
+                        <a href="#" class="category-item">
+                            <div class="category-name">🎵 Мюзикл</div>
+                            <div class="category-count">154 фильма</div>
+                        </a>
+                        <a href="#" class="category-item">
+                            <div class="category-name">🌍 Приключения</div>
+                            <div class="category-count">476 фильмов</div>
+                        </a>
+                        <a href="#" class="category-item">
+                            <div class="category-name">👶 Семейный</div>
+                            <div class="category-count">234 фильма</div>
+                        </a>
+                    </div>
+
+                    <!-- Популярные фильмы в жанрах -->
+                    <div class="page-header">
+                        <h2 class="page-title">🔥 Популярные фильмы по жанрам</h2>
+                        <p class="page-subtitle">Лучшие представители каждого жанра</p>
+                    </div>
+
+                    <div class="content-grid">
+                        <div class="menu-card">
+                            <div class="menu-card-image">
+                                <img src="images/forest.png" alt="Форрест Гамп">
+                                <div class="menu-card-rating">8.9 ⭐</div>
+                                <div class="menu-card-badge">ДРАМА</div>
+                            </div>
+                            <div class="menu-card-content">
+                                <h3 class="menu-card-title">Форрест Гамп</h3>
+                                <p class="menu-card-director">Роберт Земекис</p>
+                                <div class="menu-card-info">
+                                    <span class="menu-card-year">1994</span>
+                                    <span class="menu-card-genre">Драма</span>
+                                </div>
+                                <p class="menu-card-description">История простого человека с добрым сердцем, который невольно влияет на ключевые события американской истории.</p>
+                                <div class="menu-card-actions">
+                                    <a href="https://www.kinopoisk.ru/film/448/" class="menu-card-link">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-card">
+                            <div class="menu-card-image">
+                                <img src="images/Odnoklassniki.jpg" alt="Одноклассники">
+                                <div class="menu-card-rating">6.8 ⭐</div>
+                                <div class="menu-card-badge">КОМЕДИЯ</div>
+                            </div>
+                            <div class="menu-card-content">
+                                <h3 class="menu-card-title">Одноклассники</h3>
+                                <p class="menu-card-director">Тодд Филлипс</p>
+                                <div class="menu-card-info">
+                                    <span class="menu-card-year">2010</span>
+                                    <span class="menu-card-genre">Комедия</span>
+                                </div>
+                                <p class="menu-card-description">Группа друзей отправляется в Лас-Вегас, чтобы отпраздновать предстоящую свадьбу одного из них.</p>
+                                <div class="menu-card-actions">
+                                    <a href="https://www.kinopoisk.ru/film/450345/" class="menu-card-link">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-card">
+                            <div class="menu-card-image">
+                                <img src="images/terminator2.jpeg" alt="Терминатор 2">
+                                <div class="menu-card-rating">8.4 ⭐</div>
+                                <div class="menu-card-badge">БОЕВИК</div>
+                            </div>
+                            <div class="menu-card-content">
+                                <h3 class="menu-card-title">Терминатор 2: Судный день</h3>
+                                <p class="menu-card-director">Джеймс Кэмерон</p>
+                                <div class="menu-card-info">
+                                    <span class="menu-card-year">1991</span>
+                                    <span class="menu-card-genre">Боевик</span>
+                                </div>
+                                <p class="menu-card-description">Кибернетический организм отправлен из будущего, чтобы защитить молодого Джона Коннора.</p>
+                                <div class="menu-card-actions">
+                                    <a href="https://www.kinopoisk.ru/film/444/" class="menu-card-link">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-card">
+                            <div class="menu-card-image">
+                                <img src="images/matrix.jpg" alt="Матрица">
+                                <div class="menu-card-rating">8.5 ⭐</div>
+                                <div class="menu-card-badge">ФАНТАСТИКА</div>
+                            </div>
+                            <div class="menu-card-content">
+                                <h3 class="menu-card-title">Матрица</h3>
+                                <p class="menu-card-director">Братья Вачовски</p>
+                                <div class="menu-card-info">
+                                    <span class="menu-card-year">1999</span>
+                                    <span class="menu-card-genre">Фантастика</span>
+                                </div>
+                                <p class="menu-card-description">Хакер по имени Нео узнает шокирующую правду о реальности и своем предназначении.</p>
+                                <div class="menu-card-actions">
+                                    <a href="https://www.kinopoisk.ru/film/301/" class="menu-card-link">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            
+        </div>
+        
+        <footer class="footer">
+            <p><i>«Кино должно заставить зрителя забыть о том, что он сидит в кино».</i> - © 2025 Dimasyyya. Сделано с надеждой на 5 по курсовой ❤️</p>
+        </footer>
+    </div>
+
+    <button class="back-to-top" id="backToTop">↑</button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

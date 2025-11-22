@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DimasyyyaFilms - Сериалы</title>
+    <link rel="stylesheet" href="CSS/global.css">
+    <link rel="stylesheet" href="CSS/carousels.css">
+    <link rel="stylesheet" href="CSS/quiz.css">
+    <link rel="stylesheet" href="CSS/search.css">
+</head>
+<body>
+    <header>
+        <!-- Космические элементы фона -->
+        <div class="rocket-bg rocket-bg-1">🚀</div>
+        <div class="rocket-bg rocket-bg-2">🚀</div>
+        <div class="rocket-bg rocket-bg-3">🚀</div>
+        <div class="rocket-bg rocket-bg-4">🚀</div>
+        <div class="planet planet-1"></div>
+        <div class="planet planet-2"></div>
+
+        <div class="header-top">
+            <h1 class="dimasyyya-title">
+                DimasyyyaFilms
+            </h1>
+            <button class="quiz-header-btn" id="headerQuizBtn">
+                🎮 Викторина
+            </button>
+            <button class="theme-toggle-btn" id="themeToggle">
+                <span class="theme-icon">🌙</span>
+                <span class="theme-text">Тёмная</span>
+            </button>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="movies.html">Фильмы</a></li>
+                <li><a href="series.html">Сериалы</a></li>
+                <li><a href="directors.html">Режиссеры</a></li>
+                <li><a href="actors.html">Актеры</a></li>
+                <li><a href="articles.html">Статьи</a></li>
+                <li><a href="about.html">О нас</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Карусель с сериалами -->
+    <section class="carousel-section">
+        <div class="section-header">
+            <h3 class="section-title">⭐ Популярные сериалы</h3>
+        </div>
+        <div class="carousel-container">
+            <button class="carousel-btn carousel-prev">‹</button>
+            <div class="cards-carousel" id="seriesCarousel">
+                <!-- Карточки сериалов -->
+                <div class="series-card" data-title="во все тяжкие" data-year="2008" data-genre="криминал драма" data-rating="8.9" data-status="завершен">
+                    <div class="card-image">
+                        <img src="images/bad.png" alt="Во все тяжкие">
+                        <div class="card-rating">8.9 ⭐</div>
+                        <button class="card-like-btn">🤍</button>
+                    </div>
+                    <div class="card-content">
+                        <h4 class="card-title">Во все тяжкие</h4>
+                        <p class="card-director">Винс Гиллиган</p>
+                        <div class="card-info">
+                            <span class="card-year">2008-2013</span>
+                            <span class="card-genre">Криминал, Драма</span>
+                            <span class="card-seasons">5 сезонов</span>
+                        </div>
+                        <div class="series-stats">
+                            <span>62 эпизода</span>
+                            <span>~45 мин/серия</span>
+                        </div>
+                        <p class="card-description">Школьный учитель химии Уолтер Уайт узнаёт, что болен раком лёгких. Чтобы обеспечить семью, он начинает производить и продавать метамфетамин.</p>
+                        <div class="card-actions">
+                            <a href="https://www.kinopoisk.ru/series/404900/" class="card-link" target="_blank">Подробнее</a>
+                            <button class="card-trailer-btn" data-trailer="https://www.youtube.com/embed/HhesaQXLuRY">Трейлер</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="series-card" data-title="игра престолов" data-year="2011" data-genre="фэнтези драма" data-rating="9.0" data-status="завершен">
+                    <div class="card-image">
+                        <img src="images/game.jpeg" alt="Игра престолов">
+                        <div class="card-rating">9.0 ⭐</div>
+                        <button class="card-like-btn">🤍</button>
+                    </div>
+                    <div class="card-content">
+                        <h4 class="card-title">Игра престолов</h4>
+                        <p class="card-director">Дэвид Бениофф</p>
+                        <div class="card-info">
+                            <span class="card-year">2011-2019</span>
+                            <span class="card-genre">Фэнтези, Драма</span>
+                            <span class="card-seasons">8 сезонов</span>
+                        </div>
+                        <div class="series-stats">
+                            <span>73 эпизода</span>
+                            <span>~55 мин/серия</span>
+                        </div>
+                        <p class="card-description">К концу подходит время благоденствия, и лето, длившееся почти десятилетие, угасает. Вокруг средоточия власти Семи королевств, Железного трона, зреет заговор.</p>
+                        <div class="card-actions">
+                            <a href="https://www.kinopoisk.ru/series/464963/" class="card-link" target="_blank">Подробнее</a>
+                            <button class="card-trailer-btn" data-trailer="https://www.youtube.com/embed/KPLWWIOCOOQ">Трейлер</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="series-card" data-title="хороший доктор" data-year="2017" data-genre="драма медицина" data-rating="8.0" data-status="завершен">
+                    <div class="card-image">
+                        <img src="images/doctor.png" alt="Хороший доктор">
+                        <div class="card-rating">8.0 ⭐</div>
+                        <button class="card-like-btn">🤍</button>
+                    </div>
+                    <div class="card-content">
+                        <h4 class="card-title">Хороший доктор</h4>
+                        <p class="card-director">Фредди Хаймор</p>
+                        <div class="card-info">
+                            <span class="card-year">2017-2024</span>
+                            <span class="card-genre">Драма, Медицина</span>
+                            <span class="card-seasons">7 сезонов</span>
+                        </div>
+                        <div class="series-stats">
+                            <span>126 эпизодов</span>
+                            <span>~42 мин/серия</span>
+                        </div>
+                        <p class="card-description">Молодой хирург с синдромом саванта начинает работать в престижной больнице. Ему предстоит доказать, что его медицинский гений важнее того, что люди считают его инвалидом.</p>
+                        <div class="card-actions">
+                            <a href="https://www.kinopoisk.ru/series/1011528/" class="card-link" target="_blank">Подробнее</a>
+                            <button class="card-trailer-btn" data-trailer="https://www.youtube.com/embed/lnY9FWUTY84">Трейлер</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="series-card" data-title="офис" data-year="2005" data-genre="комедия" data-rating="8.8" data-status="завершен">
+                    <div class="card-image">
+                        <img src="images/office.jpeg" alt="Офис">
+                        <div class="card-rating">8.8 ⭐</div>
+                        <button class="card-like-btn">🤍</button>
+                    </div>
+                    <div class="card-content">
+                        <h4 class="card-title">Офис</h4>
+                        <p class="card-director">Грег Дэниелс</p>
+                        <div class="card-info">
+                            <span class="card-year">2005-2013</span>
+                            <span class="card-genre">Комедия</span>
+                            <span class="card-seasons">9 сезонов</span>
+                        </div>
+                        <div class="series-stats">
+                            <span>188 эпизодов</span>
+                            <span>~22 мин/серия</span>
+                        </div>
+                        <p class="card-description">Повседневная жизнь сотрудников офиса бумажной компании Dunder Mifflin в Скрантоне, Пенсильвания. Руководитель отделения Майкл Скотт считает себя лучшим боссом и пытается подружиться с подчиненными.</p>
+                        <div class="card-actions">
+                            <a href="https://www.kinopoisk.ru/series/253245/" class="card-link" target="_blank">Подробнее</a>
+                            <button class="card-trailer-btn" data-trailer="https://www.youtube.com/embed/LHOtME2DL4g">Трейлер</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="series-card" data-title="друзья" data-year="1994" data-genre="комедия мелодрама" data-rating="9.1" data-status="завершен">
+                    <div class="card-image">
+                        <img src="images/friends.png" alt="Друзья">
+                        <div class="card-rating">9.1 ⭐</div>
+                        <button class="card-like-btn">🤍</button>
+                    </div>
+                    <div class="card-content">
+                        <h4 class="card-title">Друзья</h4>
+                        <p class="card-director">Марта Кауфман</p>
+                        <div class="card-info">
+                            <span class="card-year">1994-2004</span>
+                            <span class="card-genre">Комедия, Мелодрама</span>
+                            <span class="card-seasons">10 сезонов</span>
+                        </div>
+                        <div class="series-stats">
+                            <span>236 эпизодов</span>
+                            <span>~22 мин/серия</span>
+                        </div>
+                        <p class="card-description">Шестеро друзей — Росс, Рэйчел, Моника, Чендлер, Джоуи и Фиби — живут в Нью-Йорке, влюбляются, ссорятся, мирятся, женятся, разводятся, но всегда остаются верными друзьями.</p>
+                        <div class="card-actions">
+                            <a href="https://www.kinopoisk.ru/series/77044/" class="card-link" target="_blank">Подробнее</a>
+                            <button class="card-trailer-btn" data-trailer="https://www.youtube.com/embed/IEEbUzffzrk">Трейлер</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="series-card" data-title="черное зеркало" data-year="2011" data-genre="фантастика антиутопия" data-rating="8.7" data-status="продолжается">
+                    <div class="card-image">
+                        <img src="images/mirror.png" alt="Черное зеркало">
+                        <div class="card-rating">8.7 ⭐</div>
+                        <button class="card-like-btn">🤍</button>
+                    </div>
+                    <div class="card-content">
+                        <h4 class="card-title">Черное зеркало</h4>
+                        <p class="card-director">Чарли Брукер</p>
+                        <div class="card-info">
+                            <span class="card-year">2011-н.в.</span>
+                            <span class="card-genre">Фантастика, Антиутопия</span>
+                            <span class="card-seasons">6 сезонов</span>
+                        </div>
+                        <div class="series-stats">
+                            <span>27 эпизодов</span>
+                            <span>~60 мин/серия</span>
+                        </div>
+                        <p class="card-description">Антология научно-фантастических историй, исследующих тёмную сторону технологий и их влияние на общество. Каждая серия — самостоятельная история с разными персонажами и миром.</p>
+                        <div class="card-actions">
+                            <a href="https://www.kinopoisk.ru/series/655800/" class="card-link" target="_blank">Подробнее</a>
+                            <button class="card-trailer-btn" data-trailer="https://www.youtube.com/embed/jDiYGjp5iFg">Трейлер</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <button class="carousel-btn carousel-next">›</button>
+        </div>
+    </section>
+
+    <!-- Модальное окно для трейлера -->
+    <div id="seriesTrailerModal" class="modal" style="display: none;">
+        <div class="modal-content trailer-modal">
+            <button class="modal-close" id="seriesTrailerModalClose">✕</button>
+            <div class="modal-body">
+                <iframe id="seriesTrailerVideo" width="800" height="450" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Dimasyyya. Сделано с надеждой на 5 по курсовой❤️</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>

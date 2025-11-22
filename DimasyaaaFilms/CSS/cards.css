@@ -1,0 +1,188 @@
+/* === КОМПАКТНЫЕ СЕКЦИИ ДЛЯ ГЛАВНОЙ === */
+.compact-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.compact-section {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 25px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+.compact-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+/* Компактные карточки фильмов */
+.compact-movie-card {
+    background: var(--bg-secondary);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.compact-movie-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px var(--shadow-color);
+    border-color: var(--text-accent);
+}
+
+.compact-card-image {
+    position: relative;
+    height: 120px;
+    overflow: hidden;
+}
+
+.compact-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.compact-movie-card:hover .compact-card-image img {
+    transform: scale(1.05);
+}
+
+.compact-card-rating {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: linear-gradient(135deg, var(--text-accent), var(--text-accent-light));
+    color: #000;
+    padding: 3px 6px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.7em;
+}
+
+.compact-card-content {
+    padding: 12px;
+}
+
+.compact-card-title {
+    font-size: 0.9em;
+    color: var(--text-secondary);
+    margin-bottom: 5px;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+.compact-card-director {
+    color: var(--text-accent);
+    font-size: 0.75em;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.compact-card-info {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.compact-card-year, .compact-card-genre {
+    background: rgba(79, 195, 247, 0.2);
+    padding: 2px 6px;
+    border-radius: 8px;
+    font-size: 0.7em;
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+}
+
+/* Компактные карточки персон */
+.compact-person-card {
+    background: var(--bg-secondary);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    height: 100%;
+    text-align: center;
+}
+
+.compact-person-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px var(--shadow-color);
+    border-color: var(--text-accent);
+}
+
+.compact-person-card .compact-card-image {
+    height: 100px;
+}
+
+.compact-person-card .compact-card-content {
+    padding: 10px 8px;
+}
+
+.compact-person-card .compact-card-title {
+    font-size: 0.85em;
+    margin-bottom: 5px;
+}
+
+.compact-card-films {
+    color: var(--text-primary);
+    font-size: 0.7em;
+    opacity: 0.8;
+    line-height: 1.2;
+}
+
+/* Адаптивность компактных секций */
+@media (max-width: 1024px) {
+    .compact-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    
+    .compact-card-image {
+        height: 100px;
+    }
+    
+    .compact-person-card .compact-card-image {
+        height: 90px;
+    }
+}
+
+@media (max-width: 768px) {
+    .compact-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .compact-section {
+        padding: 20px;
+    }
+    
+    .compact-card-content {
+        padding: 10px;
+    }
+    
+    .compact-card-title {
+        font-size: 0.8em;
+    }
+    
+    .compact-card-director, .compact-card-films {
+        font-size: 0.7em;
+    }
+}
+
+@media (max-width: 480px) {
+    .compact-cards-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .compact-card-image {
+        height: 120px;
+    }
+    
+    .compact-person-card .compact-card-image {
+        height: 100px;
+    }
+}

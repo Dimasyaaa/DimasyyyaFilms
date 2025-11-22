@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DimasyyyaFilms - Лабораторная работа №6</title>
+    <link rel="stylesheet" href="CSS/laba6.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Космические элементы фона -->
+      <div class="rocket-bg rocket-bg-1">🚀</div>
+      <div class="rocket-bg rocket-bg-2">🚀</div>
+      <div class="rocket-bg rocket-bg-3">🚀</div>
+      <div class="rocket-bg rocket-bg-4">🚀</div>
+      <div class="planet planet-1"></div>
+      <div class="planet planet-2"></div>
+
+      <header class="header">
+
+        <div class="header-top">
+          <h1 class="dimasyyya-title">DimasyyyaFilms - Лабораторная №6</h1>
+          <div class="header-controls">
+            <a href="index.html" class="quiz-header-btn">🏠 На главную</a>
+          </div>
+        </div>
+      </header>
+
+      <nav class="horizontal-menu">
+        <ul>
+          <li><a href="#task1">Задание 1</a></li>
+          <li><a href="#task2">Задание 2</a></li>
+          <li><a href="#task3">Задание 3</a></li>
+          <li><a href="#task4">Задание 4</a></li>
+          <li><a href="#task5">Задание 5</a></li>
+          <li><a href="#task6">Задание 6</a></li>
+        </ul>
+      </nav>
+
+      <div class="main-content">
+        <main class="center-column lab-center-column">
+          <section class="lab-section" id="task1">
+            <h2 class="lab-title">🎬 Задание 1: Переключение цветов строк таблицы фильмов</h2>
+            <div class="task-description">
+              <p>
+                <strong>Задание:</strong> Для веб-страницы, содержащую кроме
+                других элементов управления таблицу, примените команду
+                toggleClass(параметр). Эта команда должна переключать цвет
+                четных и нечетных строк таблицы, когда курсор мыши пересекает
+                границу таблицы.
+              </p>
+            </div>
+
+            <table class="color-table" id="colorTable">
+              <thead>
+                <tr>
+                  <th>Фильм</th>
+                  <th>Режиссер</th>
+                  <th>Год</th>
+                  <th>Рейтинг</th>
+                  <th>Жанр</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="odd-row">
+                  <td>Побег из Шоушенка</td>
+                  <td>Фрэнк Дарабонт</td>
+                  <td>1994</td>
+                  <td>9.1 ⭐</td>
+                  <td>Драма</td>
+                </tr>
+                <tr class="even-row">
+                  <td>Зеленая миля</td>
+                  <td>Фрэнк Дарабонт</td>
+                  <td>1999</td>
+                  <td>9.2 ⭐</td>
+                  <td>Драма, Фэнтези</td>
+                </tr>
+                <tr class="odd-row">
+                  <td>Темный рыцарь</td>
+                  <td>Кристофер Нолан</td>
+                  <td>2008</td>
+                  <td>8.5 ⭐</td>
+                  <td>Боевик, Драма</td>
+                </tr>
+                <tr class="even-row">
+                  <td>Форрест Гамп</td>
+                  <td>Роберт Земекис</td>
+                  <td>1994</td>
+                  <td>8.9 ⭐</td>
+                  <td>Драма, Комедия</td>
+                </tr>
+                <tr class="odd-row">
+                  <td>Начало</td>
+                  <td>Кристофер Нолан</td>
+                  <td>2010</td>
+                  <td>8.7 ⭐</td>
+                  <td>Фантастика, Триллер</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="lab-section" id="task2">
+            <h2 class="lab-title">Задание 2: Создание киноподборки</h2>
+            <div class="task-description">
+              <p>
+                <strong>Задание 2:</strong> Для веб-страницы выполните перемещение и копирование элементов, используя команды appendTo() и  prependTo().<p> 
+            </div>
+
+            <div class="image-controls">
+              <div class="control-group">
+                <label>Действие с постерами:</label>
+                <select id="actionType">
+                  <option value="append">Добавить в конец коллекции (appendTo)</option>
+                  <option value="prepend">Добавить в начало коллекции (prependTo)</option>
+                </select>
+              </div>
+
+              <div class="control-group">
+                <label>Киноподборки:</label>
+                <div class="checkbox-group">
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="target"
+                      value="target1"
+                      checked
+                    />
+                    🎯 Моя коллекция</label
+                  >
+                  <label
+                    ><input type="checkbox" name="target" value="target2" />
+                    ⭐ Любиммки</label
+                  >
+                  <label
+                    ><input type="checkbox" name="target" value="target3" />
+                    📺 Хочу посмотреть</label
+                  >
+                </div>
+              </div>
+
+              <button id="executeAction" class="action-btn">
+                Создать подборку
+              </button>
+            </div>
+
+            <div class="image-workspace">
+              <div class="source-container">
+                <h3>📀 Доступные фильмы:</h3>
+                <div class="source-images">
+                  <img
+                    src="images/pobeg.png"
+                    alt="Побег из Шоушенка"
+                    data-id="1"
+                    data-title="Побег из Шоушенка"
+                  />
+                  <img
+                    src="images/batman.png"
+                    alt="Темный рыцарь"
+                    data-id="2"
+                    data-title="Темный рыцарь"
+                  />
+                  <img
+                    src="images/green.png"
+                    alt="Зеленая миля"
+                    data-id="3"
+                    data-title="Зеленая миля"
+                  />
+                  <img
+                    src="images/forest.png"
+                    alt="Форрест Гамп"
+                    data-id="4"
+                    data-title="Форрест Гамп"
+                  />
+                  <img
+                    src="images/titanik.png"
+                    alt="Титаник"
+                    data-id="5"
+                    data-title="Титаник"
+                  />
+                  <img
+                    src="images/gbookjpg.jpg"
+                    alt="Зеленая книга"
+                    data-id="6"
+                    data-title="Зеленая книга"
+                  />
+                </div>
+              </div>
+
+              <div class="targets-container">
+                <div class="target-box" id="target1">
+                  <h4>🎯 Моя коллекция</h4>
+                  <div class="target-content"></div>
+                </div>
+                <div class="target-box" id="target2">
+                  <h4>⭐ Любиммки</h4>
+                  <div class="target-content"></div>
+                </div>
+                <div class="target-box" id="target3">
+                  <h4>📺 Хочу посмотреть</h4>
+                  <div class="target-content"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="lab-section" id="task3">
+            <h2 class="lab-title">Задание 3: Эффекты кинопленки</h2>
+            <div class="task-description">
+              <p>
+                <strong>Задание:</strong> Для веб-страницы с изображением примените команду toggle() и подключите обработчик нечетных щелчков мыши, который делает изображение полупрозрачным, и обработчик четных щелчков, который делает изображение непрозрачным.
+              </p>
+            </div>
+
+            <div class="toggle-image-container">
+              <img
+                src="images/start.png"
+                alt="Начало"
+                id="toggleImage"
+                class="toggle-image"
+              />
+              <div class="image-controls-simple">
+                <button id="resetToggle" class="action-btn">
+                  Сбросить эффекты
+                </button>
+              </div>
+              <div class="click-counter">
+                <p>Кликов: <span id="clickCount">0</span></p>
+                <p><small>Клик - сепия, Двойной клик - винтаж</small></p>
+              </div>
+            </div>
+          </section>
+
+          <section class="lab-section" id="task4">
+            <h2 class="lab-title">Задание 4: Конструктор киновечера</h2>
+            <div class="task-description">
+              <p>
+                <strong>Задание:</strong> Для веб-страницы примените принцип постепенного раскрытия информации. После выбора каких-то опций  информация  убирается.
+              </p>
+            </div>
+
+            <div class="menu-container">
+              <div class="menu-category">
+                <h3 class="menu-category-title" data-category="main">
+                   Основной фильм
+                </h3>
+                <div class="menu-items">
+                  <div class="menu-item">
+                    <label>
+                      <input
+                        type="radio"
+                        name="mainFilm"
+                        value="action"
+                        data-rating="8.5"
+                      />
+                      Боевик — рейтинг 8.5/10
+                    </label>
+                    <div class="item-options">
+                      <label
+                        ><input
+                          type="checkbox"
+                          name="action-sub"
+                          value="0.2"
+                        />
+                        Субтитры (+0.2)</label
+                      >
+                      <label
+                        ><input
+                          type="checkbox"
+                          name="action-dub"
+                          value="0.3"
+                        />
+                        Качественный дубляж (+0.3)</label
+                      >
+                    </div>
+                  </div>
+                  <div class="menu-item">
+                    <label>
+                      <input
+                        type="radio"
+                        name="mainFilm"
+                        value="comedy"
+                        data-rating="7.8"
+                      />
+                      Комедия — рейтинг 7.8/10
+                    </label>
+                    <div class="item-options">
+                      <label
+                        ><input
+                          type="checkbox"
+                          name="comedy-sub"
+                          value="0.1"
+                        />
+                        Субтитры (+0.1)</label
+                      >
+                      <label
+                        ><input
+                          type="checkbox"
+                          name="comedy-bloopers"
+                          value="0.4"
+                        />
+                        Доп. материалы (+0.4)</label
+                      >
+                    </div>
+                  </div>
+                  <div class="menu-item">
+                    <label>
+                      <input
+                        type="radio"
+                        name="mainFilm"
+                        value="drama"
+                        data-rating="9.1"
+                      />
+                      Драма — рейтинг 9.1/10
+                    </label>
+                    <div class="item-options">
+                      <label
+                        ><input
+                          type="checkbox"
+                          name="drama-sub"
+                          value="0.3"
+                        />
+                        Субтитры (+0.3)</label
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="menu-category">
+                <h3 class="menu-category-title" data-category="snacks">
+                   Кино-закуски
+                </h3>
+                <div class="menu-items">
+                  <div class="menu-item">
+                    <label>
+                      <input
+                        type="radio"
+                        name="snack"
+                        value="popcorn"
+                        data-rating="0.8"
+                      />
+                      Попкорн — +0.8 к настроению
+                    </label>
+                  </div>
+                  <div class="menu-item">
+                    <label>
+                      <input
+                        type="radio"
+                        name="snack"
+                        value="drink"
+                        data-rating="0.5"
+                      />
+                      Напиток — +0.5 к настроению
+                    </label>
+                  </div>
+                  <div class="menu-item">
+                    <label>
+                      <input
+                        type="radio"
+                        name="snack"
+                        value="combo"
+                        data-rating="1.2"
+                      />
+                      Комбо-набор — +1.2 к настроению
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="menu-category">
+                <h3 class="menu-category-title" data-category="atmosphere">
+                   Атмосфера
+                </h3>
+                <div class="menu-items">
+                  <div class="menu-item">
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="atmosphere"
+                        value="lights"
+                        data-rating="0.7"
+                      />
+                      Приглушенный свет (+0.7)
+                    </label>
+                  </div>
+                  <div class="menu-item">
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="atmosphere"
+                        value="sound"
+                        data-rating="0.9"
+                      />
+                      Объемный звук (+0.9)
+                    </label>
+                  </div>
+                  <div class="menu-item">
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="atmosphere"
+                        value="comfort"
+                        data-rating="1.1"
+                      />
+                      Удобные места (+1.1)
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="menu-category">
+                <h3 class="menu-category-title" data-category="company">
+                   Компания
+                </h3>
+                <div class="menu-items">
+                  <div class="menu-item">
+                    <label>
+                      <input
+                        type="radio"
+                        name="company"
+                        value="alone"
+                        data-rating="0.5"
+                      />
+                      Один — +0.5
+                    </label>
+                  </div>
+                  <div class="menu-item">
+                    <label>
+                      <input
+                        type="radio"
+                        name="company"
+                        value="friends"
+                        data-rating="1.5"
+                      />
+                      С друзьями — +1.5
+                    </label>
+                  </div>
+                  <div class="menu-item">
+                    <label>
+                      <input
+                        type="radio"
+                        name="company"
+                        value="family"
+                        data-rating="1.2"
+                      />
+                      С семьей — +1.2
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="order-summary">
+                <div class="summary-header">
+                  <h4> Итоговый рейтинг вечера: <span id="totalAmount">0</span>/10</h4>
+                </div>
+                <div class="summary-actions">
+                  <button id="clearOrder" class="action-btn">
+                     Новый подбор
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="lab-section" id="task5">
+            <h2 class="lab-title">Задание 5: Фильмотека по жанрам</h2>
+            <div class="task-description">
+              <p>
+                <strong>Задание:</strong> Реализовать сворачиваемый список с
+                постепенным отображением и скрытием элементов.
+              </p>
+            </div>
+
+            <div class="collapsible-list">
+              <div class="list-header">
+                <h3> Фильмотека DimasyyyaFilms</h3>
+                <button id="toggleAll" class="action-btn">
+                  Развернуть/Свернуть все
+                </button>
+              </div>
+
+              <div class="list-item">
+                <div class="list-title" data-target="drama">
+                   Драмы
+                  <span class="toggle-icon">▼</span>
+                </div>
+                <div class="list-content" id="drama">
+                  <ul>
+                    <li>Побег из Шоушенка (1994) ⭐9.1</li>
+                    <li>Зеленая миля (1999) ⭐9.2</li>
+                    <li>Форрест Гамп (1994) ⭐8.9</li>
+                    <li>Список Шиндлера (1993) ⭐8.9</li>
+                    <li>1+1 (2011) ⭐8.8</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="list-item">
+                <div class="list-title" data-target="action">
+                   Боевики
+                  <span class="toggle-icon">▼</span>
+                </div>
+                <div class="list-content" id="action">
+                  <ul>
+                    <li>Темный рыцарь (2008) ⭐8.5</li>
+                    <li>Криминальное чтиво (1994) ⭐8.6</li>
+                    <li>Бесславные ублюдки (2009) ⭐8.3</li>
+                    <li>Матрица (1999) ⭐8.7</li>
+                    <li>Джон Уик (2014) ⭐7.4</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="list-item">
+                <div class="list-title" data-target="fantasy">
+                   Фэнтези
+                  <span class="toggle-icon">▼</span>
+                </div>
+                <div class="list-content" id="fantasy">
+                  <ul>
+                    <li>Властелин колец (2001-2003) ⭐8.8</li>
+                    <li>Гарри Поттер (2001-2011) ⭐7.6-8.1</li>
+                    <li>Игра престолов (2011-2019) ⭐9.0</li>
+                    <li>Аватар (2009) ⭐7.8</li>
+                    <li>Хоббит (2012-2014) ⭐7.8-7.9</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="list-item">
+                <div class="list-title" data-target="scifi">
+                   Научная фантастика
+                  <span class="toggle-icon">▼</span>
+                </div>
+                <div class="list-content" id="scifi">
+                  <ul>
+                    <li>Начало (2010) ⭐8.7</li>
+                    <li>Интерстеллар (2014) ⭐8.6</li>
+                    <li>Матрица (1999) ⭐8.7</li>
+                    <li>Бегущий по лезвию 2049 (2017) ⭐8.0</li>
+                    <li>Прибытие (2016) ⭐7.9</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="lab-section" id="task6">
+            <h2 class="lab-title"> Задание 6: Кинопостера и подсказки</h2>
+            <div class="task-description">
+              <p>
+                <strong>Задание:</strong> реализуйте возможность  масштабирования при щелчке на изображении, или масштабировании какой-то части изображения. Реализуйте всплывающие подсказки.
+              </p>
+            </div>
+
+            <div class="zoom-container">
+              <div class="zoom-controls">
+                <button id="zoomIn" class="action-btn">Увеличить постер</button>
+                <button id="zoomOut" class="action-btn">Уменьшить постер</button>
+                <button id="resetZoom" class="action-btn">Сбросить масштаб</button>
+                <span class="zoom-level"
+                  >Масштаб: <span id="zoomValue">100%</span></span
+                >
+              </div>
+
+              <div class="image-zoom-wrapper">
+                <img
+                  src="images/cosmos.png"
+                  alt="Интерстеллар"
+                  id="zoomImage"
+                  class="zoom-image"
+                  data-tooltip="Интерстеллар (2014) - Нажмите для увеличения постера"
+                />
+              </div>
+
+              <div class="tooltip-demo">
+                <h4>Кино-подсказки:</h4>
+                <div class="tooltip-items">
+                  <button
+                    class="tooltip-btn"
+                    data-tooltip="Добавить фильм в избранное"
+                  >
+                    ❤️ В избранное
+                  </button>
+                  <span
+                    class="tooltip-text"
+                    data-tooltip="Рейтинг фильма на Кинопоиске"
+                    >⭐ 8.7/10</span
+                  >
+                  <div
+                    class="tooltip-box"
+                    data-tooltip="Фантастика, драма, приключения"
+                  >
+                     Жанры
+                  </div>
+                  <button
+                    class="tooltip-btn"
+                    data-tooltip="Посмотреть трейлер фильма"
+                  >
+                     Трейлер
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+
+      <footer class="footer">
+        <p>
+          <i>«Qquery это ужас!!!»</i> - © 2025 Dimasyyya. Лабораторная работа №6!
+        </p>
+      </footer>
+    </div>
+
+    <button class="back-to-top" id="backToTop">↑</button>
+
+    <script src="js/main.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/laba6.js"></script>
+  </body>
+</html>
